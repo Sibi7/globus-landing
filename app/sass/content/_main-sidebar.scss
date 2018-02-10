@@ -1,9 +1,9 @@
 .sidebar{
+  float: left;
+  position: fixed;
   width: 270px;
   height: 100%;
-  float: left;
   padding: 40px;
-  position: relative;
   background-color: #030621;
   &__logo{
     position: relative;
@@ -42,8 +42,8 @@
     border: 1px solid #b89855;
     transition: 200ms ease;
     &:hover{
-      color: lighten(#b89855, 15%);
-      border-color: lighten(#b89855, 15%);
+      color: #fff;
+      border-color: #fff;
       transition: 200ms ease;
     }
   }
@@ -58,9 +58,10 @@
     font-family: $latoBold;
     font-size: 14px;
     transition: 200ms ease;
+
     &:hover{
       transition: 200ms ease;
-      color: darken(#d1b374, 10%);
+      color: #fff;
     }
     &:after{
       content: '';
@@ -79,14 +80,35 @@
     flex-direction: column;
     width: 100%;
     list-style: none;
-    margin: 0;
+    margin: 0 0 5px 0;
     padding: 0;
     li{
-      margin-bottom: 15px;
       a{
         color: #ffffff;
         font-family: $latoLight;
         font-size: 14px;
+        transition: 200ms ease;
+        padding-bottom: 15px;
+        width: 100%;
+        display: inline-block;
+        &:hover{
+          color: #d1b374;
+          transition: 200ms ease;
+        }
+      }
+    }
+  }
+  &__socials{
+    display: flex;
+    width: 100%;
+    a{
+      margin-right: 15px;
+      color: #b89855;
+      font-size: 17px;
+      transition: 200ms ease;
+      &:hover{
+        color: #fff;
+        transition: 200ms ease;
       }
     }
   }

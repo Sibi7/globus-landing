@@ -11,3 +11,23 @@ button{
   overflow: hidden;
   clear: both;
 }
+.btn-white{
+  padding: 14px 35px;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: transparent;
+  position: relative;
+  border: 1px solid #ffffff;
+  &:before{
+    content: '';
+    position: absolute;
+    right: 20px;
+    font-size: 14px;
+    width: 10px;
+    top: 14px;
+    height: 12px;
+    background: url(../img/icons/arrow-r.svg) no-repeat center center;
+    background-size: contain;
+  }
+}
