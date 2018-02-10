@@ -1,0 +1,13 @@
+button{
+  transition: 200ms ease;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.05);
+    transition: 200ms ease;
+
+  }
+}
+.clearfix{
+  overflow: hidden;
+  clear: both;
+}
