@@ -1,5 +1,33 @@
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
-//@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
-//@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-//@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
-//@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&subset=cyrillic');
+
+$latoBlack: 'Lato-Black';
+$latoBold: 'Lato-Bold';
+$latoRegular: 'Lato-Regulat';
+$latoLight: 'Lato-light';
+
+@font-face {
+  font-family: 'Lato-Black';
+  src: url('../fonts/lato/LatoBlack.woff') format('woff'),
+  url('../fonts/gilroy/LatoBlack.woff2') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../fonts/lato/LatoBold.woff') format('woff'),
+  url('../fonts/gilroy/LatoBold.woff2') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Regulat';
+  src: url('../fonts/lato/LatoRegular.woff') format('woff'),
+  url('../fonts/gilroy/LatoRegular.woff2') format('woff2');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Lato-light';
+  src: url('../fonts/lato/LatoLight.woff') format('woff'),
+  url('../fonts/gilroy/LatoLight.woff2') format('woff2');
+  font-weight: normal;
+}

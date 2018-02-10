@@ -7,9 +7,22 @@
     justify-content: center;
     list-style: none;
     padding: 20px;
+    margin: 0;
+    background: #fff;
     li{
       display: inline-block;
       margin: 0 25px;
+      a{
+        color: #b89855;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        transition: 200ms ease;
+        &:hover{
+          transition: 200ms ease;
+          color: darken(#b89855, 10%);
+        }
+      }
     }
   }
 }
