@@ -9,6 +9,7 @@
     <title>Globus Estate</title>
     <link href="css/libs.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.min.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 <!-- open .header -->
@@ -25,6 +26,12 @@
     </div>
     <a href="#" class="sidebar__discount-btn">получить сКИдку</a>
     <a href="#" class="sidebar__feedback">Заказать звонок</a>
+    <ul class="header__nav">
+        <li><a href="#">Новостройки</a></li>
+        <li><a href="#">Городская недвижимость</a></li>
+        <li><a href="#">Загородная недвижимость</a></li>
+        <li><a href="#">Скидки на новостройки</a></li>
+    </ul>
     <ul class="sidebar__nav">
         <li><a href="#">Ипотека</a></li>
         <li><a href="#">Инвестиции</a></li>
@@ -41,7 +48,7 @@
 </aside>
 <!-- end main-sidebar.html-->
 
-<section class="right-container">
+<div class="right-container">
 <!-- start header.html-->
 <header class="header">
 
@@ -51,7 +58,9 @@
         <li><a href="#">Загородная недвижимость</a></li>
         <li><a href="#">Скидки на новостройки</a></li>
     </ul>
-
+    <div class="menu btn5" data-menu="5">
+        <div class="icon"></div>
+    </div>
     <div class="owl-carousel-header owl-carousel">
         <div class="header__slider" style="background-image: url(img/slide1.jpg)">
             <div class="header__slider--description">
@@ -162,11 +171,256 @@
 <!-- end header-search.html-->
 <!-- start content.html-->
 <main class="housing">
-    <div class="housing__item" style="background-image: url(img/1.jpg)"></div>
-    <div class="housing__item" style="background-image: url(img/2.jpg)"></div>
+    <div class="housing__item" style="background-image: url(img/1.jpg)">
+        <div class="housing__content">
+            <h2 class="housing__title">ЖК “Магнат”</h2>
+            <div>
+                <div class="housing__price">от <span>2</span> млн. руб.</div>
+                <div class="housing__area">от 184 500 р./м<sup>2</sup></div>
+            </div>
+            <div class="housing__city">
+                г. Москва
+                <span> м. Марьино</span>
+            </div>
+        </div>
+        <a href="#" class="btn-white">Подробнее</a>
+    </div>
+    <div class="housing__item" style="background-image: url(img/2.jpg)">
+        <div class="housing__content">
+            <h2 class="housing__title">ЖК “калининский”</h2>
+            <div>
+                <div class="housing__price">от <span>2</span> млн. руб.</div>
+                <div class="housing__area">от 184 500 р./м<sup>2</sup></div>
+            </div>
+            <div class="housing__city">
+                г. Сочи
+            </div>
+        </div>
+        <a href="#" class="btn-white">Подробнее</a>
+    </div>
+    <div class="housing__item" style="background-image: url(img/3.jpg)">
+        <div class="housing__content">
+            <h2 class="housing__title">ЖК “новотроицкий”</h2>
+            <div>
+                <div class="housing__price">от <span>2</span> млн. руб.</div>
+                <div class="housing__area">от 184 500 р./м<sup>2</sup></div>
+            </div>
+            <div class="housing__city">
+                г. Москва
+            </div>
+        </div>
+        <a href="#" class="btn-white">Подробнее</a>
+    </div>
+    <div class="housing__item" style="background-image: url(img/4.jpg)">
+        <div class="housing__content">
+            <h2 class="housing__title">ЖК “олигарх”</h2>
+            <div>
+                <div class="housing__price">от <span>2</span> млн. руб.</div>
+                <div class="housing__area">от 184 500 р./м<sup>2</sup></div>
+            </div>
+            <div class="housing__city">
+                г. Зеленогорск
+            </div>
+        </div>
+        <a href="#" class="btn-white">Подробнее <i class="fal fa-chevron-right"></i></a>
+    </div>
+    <div class="housing__item-text">
+        <h2>
+            <span> компания globus estate</span>
+            продажа квартир бизнес
+            и премиум класса
+        </h2>
+        <p>
+            Ролевое поведение потенциально. Трагедия вероятна. Как было показано выше, трагическое начинает
+            первоначальный фарс. Романтизм изящно просветляет монтаж. Иррациональное в творчестве имеет суггестивный
+            драматизм. Трагическое, согласно традиционным представлениям, аккумулирует первоначальный общекультурный
+            цикл.
+        </p>
+        <p>
+            Гармония, на первый взгляд, имеет романтизм. Развивая эту тему, биографический метод представляет собой
+            неизменный филогенез. Континуальность художественного процесса вероятна. Действительно, компенсаторная
+            функция свободна. Снижение продолжает первоначальный монтаж.
+        </p>
+    </div>
+    <div class="housing__item-wrap">
+        <div class="housing__item-small" style="background-image: url(img/5.jpg)">
+            <a href="#" class="btn-white">Подробнее</a>
+        </div>
+        <div class="housing__item-x-small" style="background-image: url(img/6.jpg)">
+            <a href="#" class="btn-white">Ипотека от 5,5%</a>
+        </div>
+        <div class="housing__item-x-small" style="background-image: url(img/7.jpg)">
+            <a href="#" class="btn-white">рассрочка</a>
+        </div>
+    </div>
 </main>
 <!-- end content.html-->
+<!-- start property-selection.html-->
+<section class="property-selection">
+
+    <h2 class="property-selection__title">подбор недвижимости</h2>
+
+    <form action="#">
+
+        <div class="property-selection__range-slide">
+
+            <span class="title-range">Стоимость, руб.</span>
+
+            <div class="range-slider" id="facet-price-range-slider" data-options='{"output":{"prefix":"$"},"maxSymbol":"+"}'>
+                <input name="range-1" value="0" min="0" max="1250" step="1" type="range">
+                <input name="range-2" value="1250" min="0" max="1250" step="1" type="range">
+            </div>
+
+            <div class="custom-select">
+                <select>
+                    <option value="0">Выберете регион</option>
+                    <option value="1">в Ростовской обл.</option>
+                    <option value="2">в Московской обл.</option>
+                    <option value="3">в Ростовской обл.</option>
+                    <option value="4">в Московской обл.</option>
+                    <option value="5">в Ростовской обл.</option>
+                    <option value="6">в Московской обл.</option>
+                    <option value="7">в Ростовской обл.</option>
+                </select>
+            </div>
+            <div class="custom-select">
+                <select>
+                    <option value="0">Вся недвижимость</option>
+                    <option value="1">Апартаменты</option>
+                    <option value="2">Апартаменты</option>
+                    <option value="3">Апартаменты</option>
+                    <option value="4">Апартаменты</option>
+                    <option value="5">Апартаменты</option>
+                    <option value="6">Апартаменты</option>
+                    <option value="7">Апартаменты</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="property-selection__range-slide">
+            <span class="title-range">Площадь, м<sup>2</sup></span>
+            <div class="range-slider " id="facet-area-range-slider" data-options='{"output":{"prefix":"$"},"maxSymbol":"+"}'>
+                <input name="range-1" value="0" min="0" max="1250" step="1" type="range">
+                <input name="range-2" value="1250" min="0" max="1250" step="1" type="range">
+            </div>
+
+            <div class="property-selection__rooms">
+                <span class="title-range">Кол-во комнат:</span>
+                <div class="property-selection__numbers">1</div>
+                <div class="property-selection__numbers active">2</div>
+                <div class="property-selection__numbers">3</div>
+                <div class="property-selection__numbers">4+</div>
+            </div>
+
+        </div>
+
+        <a href="#" class="btn-white">показать</a>
+    </form>
+
 </section>
+<!-- end property-selection.html-->
+<!-- start progress.html-->
+<section class="progress">
+    <h2 class="progress__title">наши достижения</h2>
+    <div class="progress__wrap">
+        <div class="progress__item">
+            <span>1081</span>
+            квартир продано
+        </div>
+        <div class="progress__item">
+            <span>216</span>
+            объектов в базе
+        </div>
+        <div class="progress__item">
+            <span>11</span>
+            лет работы
+        </div>
+    </div>
+</section>
+<!-- end progress.html-->
+<!-- start partners.html-->
+<section class="partners">
+    <h2 class="partners__title">наши постоянные партнеры</h2>
+    <div class="partners__wrap owl-carousel">
+        <a href="#" class="partners__item">
+            <img src="img/partners/1.png" alt="">
+        </a>
+        <a href="#" class="partners__item">
+            <img src="img/partners/2.png" alt="">
+        </a>
+        <a href="#" class="partners__item">
+            <img src="img/partners/3.png" alt="">
+        </a>
+        <a href="#" class="partners__item">
+            <img src="img/partners/4.png" alt="">
+        </a>
+        <a href="#" class="partners__item">
+            <img src="img/partners/5.png" alt="">
+        </a>
+        <a href="#" class="partners__item">
+            <img src="img/partners/1.png" alt="">
+        </a>
+    </div>
+    <div class="partners__contacts">
+        <span>Узнать больше по телефону:</span>
+        <a href="tel:+7 (499) 390-55-71" class="btn-phone">+7 (499) 390-55-71</a>
+        <a href="#" class="sidebar__feedback">Заказать обратный звонок</a>
+    </div>
+</section>
+<!-- end partners.html-->
+<!-- start footer.html-->
+<footer class="footer">
+    <div class="footer__wrap">
+        <div class="footer__item">
+            <h3 class="footer__title">Новостройки</h3>
+            <ul class="footer__nav">
+                <li><a href="#">Квартиры</a></li>
+                <li><a href="#">Пентхаусы</a></li>
+                <li><a href="#">Апартаменты</a></li>
+                <li><a href="#">Аренда квартир</a></li>
+            </ul>
+        </div>
+        <div class="footer__item">
+            <h3 class="footer__title">Городская недвижимость</h3>
+            <ul class="footer__nav">
+                <li><a href="#">Коттеджи/Дома</a></li>
+                <li><a href="#">Земельные участки</a></li>
+                <li><a href="#">Таунхаусы/Квартиры</a></li>
+                <li><a href="#">Дома с бассейном</a></li>
+                <li><a href="#">Деревянные дома</a></li>
+                <li><a href="#">Коттеджные поселки</a></li>
+                <li><a href="#">Аренда домов</a></li>
+            </ul>
+        </div>
+        <div class="footer__item">
+            <h3 class="footer__title">Загородная недвижимость</h3>
+            <ul class="footer__nav">
+                <li><a href="#">Торговая</a></li>
+                <li><a href="#">Офисы</a></li>
+                <li><a href="#">Арендный бизнес</a></li>
+                <li><a href="#">Склады</a></li>
+                <li><a href="#">Инвестиции</a></li>
+                <li><a href="#">Аренда офисов</a></li>
+            </ul>
+        </div>
+        <div class="footer__item">
+            <h3 class="footer__title">Контакты</h3>
+            <ul class="footer__nav">
+                <li><a href="tel:+7 (499) 390-55-71"><i class="fa fa-phone" aria-hidden="true"></i> +7 (499) 390-55-71</a></li>
+                <li><a href="mailto:info@globusestate.ru"><i class="fas fa-envelope"></i> info@globusestate.ru</a></li>
+                <li><a href="#"><i class="far fa-clock"></i> Пн-пт: с 8:00 до 22:00</a></li>
+                <li><a href="#"><i class="fas fa-map-marker"></i> 141407, г. Москва, <br>ул. Кронштадский бул.,  д.6, корп. 5</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__copyright">
+        © Globus Estate 2018 г.  Все права защищены
+        Представленная информация не является публичной офертой
+    </div>
+</footer>
+<!-- end footer.html-->
+</div>
 
 <!-- start html_close.html-->
 <script src='js/jquery-3.2.1.js' type="text/javascript"></script>

@@ -3,6 +3,10 @@
     float: left;
     width: calc(100% - 270px);
     margin-left: 270px;
+    @include breakpoint(max-width 1024px){
+        margin-left: 0;
+        width: 100%;
+    }
 }
 .container {
     box-sizing: border-box;

@@ -1,0 +1,63 @@
+<section class="property-selection">
+
+    <h2 class="property-selection__title">подбор недвижимости</h2>
+
+    <form action="#">
+
+        <div class="property-selection__range-slide">
+
+            <span class="title-range">Стоимость, руб.</span>
+
+            <div class="range-slider" id="facet-price-range-slider" data-options='{"output":{"prefix":"$"},"maxSymbol":"+"}'>
+                <input name="range-1" value="0" min="0" max="1250" step="1" type="range">
+                <input name="range-2" value="1250" min="0" max="1250" step="1" type="range">
+            </div>
+
+            <div class="custom-select">
+                <select>
+                    <option value="0">Выберете регион</option>
+                    <option value="1">в Ростовской обл.</option>
+                    <option value="2">в Московской обл.</option>
+                    <option value="3">в Ростовской обл.</option>
+                    <option value="4">в Московской обл.</option>
+                    <option value="5">в Ростовской обл.</option>
+                    <option value="6">в Московской обл.</option>
+                    <option value="7">в Ростовской обл.</option>
+                </select>
+            </div>
+            <div class="custom-select">
+                <select>
+                    <option value="0">Вся недвижимость</option>
+                    <option value="1">Апартаменты</option>
+                    <option value="2">Апартаменты</option>
+                    <option value="3">Апартаменты</option>
+                    <option value="4">Апартаменты</option>
+                    <option value="5">Апартаменты</option>
+                    <option value="6">Апартаменты</option>
+                    <option value="7">Апартаменты</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="property-selection__range-slide">
+            <span class="title-range">Площадь, м<sup>2</sup></span>
+            <div class="range-slider " id="facet-area-range-slider" data-options='{"output":{"prefix":"$"},"maxSymbol":"+"}'>
+                <input name="range-1" value="0" min="0" max="1250" step="1" type="range">
+                <input name="range-2" value="1250" min="0" max="1250" step="1" type="range">
+            </div>
+
+            <div class="property-selection__rooms">
+                <span class="title-range">Кол-во комнат:</span>
+                <div class="property-selection__numbers">1</div>
+                <div class="property-selection__numbers active">2</div>
+                <div class="property-selection__numbers">3</div>
+                <div class="property-selection__numbers">4+</div>
+            </div>
+
+        </div>
+
+        <a href="#" class="btn-white">показать</a>
+    </form>
+
+</section>

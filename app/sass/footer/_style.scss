@@ -1,0 +1,65 @@
+.footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 60px 40px;
+  background-color: #1a1e47;
+  @include breakpoint(max-width 770px) {
+    padding: 40px 10px;
+  }
+  &__wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include breakpoint(max-width 770px) {
+    }
+  }
+  &__item {
+    @include breakpoint(max-width 770px) {
+      width: 50%;
+      margin-bottom: 15px;
+    }
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #b89855;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        color: #fff;
+        font-family: $latoLight;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 28px;
+
+      }
+      svg {
+        color: #b89855;
+        margin-right: 10px;
+        @include breakpoint(max-width 770px) {
+          display: none;
+        }
+      }
+
+    }
+  }
+  &__copyright {
+    width: 404px;
+    color: #d1b374;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,10 +1,15 @@
 .sidebar{
   float: left;
+  transition: 500ms ease;
   position: fixed;
   width: 270px;
   height: 100%;
   padding: 40px;
+  z-index: 9999;
   background-color: #030621;
+  @include breakpoint(max-width 1024px){
+    left: -270px;
+  }
   &__logo{
     position: relative;
     float: left;
@@ -98,6 +103,37 @@
       }
     }
   }
+  .header__nav{
+    display: none;
+
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    margin: 0 0 5px 0;
+    padding: 0;
+    background: transparent;
+    @include breakpoint(max-width 1024px){
+      display: flex;
+    }
+    li{
+      padding: 0;
+      a{
+        color: #ffffff;
+        font-family: $latoLight;
+        font-size: 14px;
+        transition: 200ms ease;
+        width: 100%;
+        padding: 0 0 15px 0 ;
+        display: inline-block;
+        text-transform: none;
+        &:hover{
+          color: #d1b374;
+          background: transparent;
+          transition: 200ms ease;
+        }
+      }
+    }
+  }
   &__socials{
     display: flex;
     width: 100%;
@@ -112,4 +148,16 @@
       }
     }
   }
+}
+.active-bar{
+  left: 0;
+  position: fixed;
+  margin-right: 270px;
+  transition: 500ms ease;
+  z-index: 9999;
+  height: 100%;
+  overflow-y: scroll;
+}
+.overflow-hidden{
+  overflow: hidden;
 }
