@@ -4,6 +4,14 @@ $latoBlack: 'Lato-Black';
 $latoBold: 'Lato-Bold';
 $latoRegular: 'Lato-Regulat';
 $latoLight: 'Lato-light';
+$myriad: 'Myriad-pro';
+
+@font-face {
+  font-family: 'Myriad-pro';
+  src: url('../fonts/myriad/MyriadProRegular.woff') format('woff'),
+  url('../fonts/myriad/MyriadProRegular.woff2') format('woff2');
+  font-weight: normal;
+}
 
 @font-face {
   font-family: 'Lato-Black';
