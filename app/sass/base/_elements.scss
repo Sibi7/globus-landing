@@ -1,20 +1,22 @@
-button{
+button {
   transition: 200ms ease;
   cursor: pointer;
-  &:hover{
+  &:hover {
     transform: scale(1.05);
     transition: 200ms ease;
 
   }
 }
-.clearfix{
+
+.clearfix {
   overflow: hidden;
   clear: both;
 }
-.btn-white{
+
+.btn-white {
   position: absolute;
   left: 50%;
-  padding: 14px 35px;
+  padding: 14px 10px;
   color: #ffffff;
   font-size: 13px;
   text-transform: uppercase;
@@ -24,18 +26,18 @@ button{
   transition: 200ms ease;
   width: 190px;
   text-align: center;
-  &:hover{
+  &:hover {
     color: #b89855;
     border-color: #b89855;
     transition: 200ms ease;
-    &:before{
+    &:before {
       background-image: url(../img/icons/arrow-r2.svg);
     }
   }
-  &:before{
+  &:before {
     content: '';
     position: absolute;
-    right: 20px;
+    right: 12px;
     font-size: 14px;
     width: 10px;
     top: 14px;
@@ -44,6 +46,7 @@ button{
     background-size: contain;
   }
 }
+
 .custom-select {
   position: relative;
   float: left;
@@ -54,14 +57,17 @@ button{
     width: 146px;
   }
 }
+
 .custom-select select {
   display: none;
 }
+
 .select-selected {
   background-color: #fff;
   color: #b89855;
   font-size: 14px;
 }
+
 .select-selected:after {
   position: absolute;
   content: "";
@@ -74,10 +80,12 @@ button{
   background-size: contain;
   transition: 200ms ease;
 }
+
 .select-selected.select-arrow-active:after {
   transform: rotate(180deg);
   transition: 200ms ease;
 }
+
 .select-items div, .select-selected {
   color: #b89855;
   font-size: 14px;
@@ -85,13 +93,15 @@ button{
   padding: 15px 16px;
   cursor: pointer;
   border-bottom: 1px solid #b89855;
-  &:last-child{
+  &:last-child {
     border: none;
   }
 }
-.select-selected{
+
+.select-selected {
   border: none;
 }
+
 .select-items {
   position: absolute;
   background-color: #fff;
@@ -101,17 +111,17 @@ button{
   z-index: 99;
   transition: 200ms ease;
 }
+
 .select-hide {
   display: none;
 }
+
 .select-items div:hover {
   background-color: #b89855;
   transition: 200ms ease;
   color: #fff;
 }
 
-
-/* Customize the label (the containers) */
 .containers {
   display: block;
   position: relative;
@@ -125,14 +135,12 @@ button{
   user-select: none;
 }
 
-/* Hide the browser's default checkbox */
 .containers input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
@@ -142,29 +150,24 @@ button{
   background-color: #eee;
 }
 
-/* On mouse-over, add a grey background color */
 .containers:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
 .containers input:checked ~ .checkmark {
   background-color: #2196F3;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .containers input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .containers .checkmark:after {
   left: 9px;
   top: 5px;

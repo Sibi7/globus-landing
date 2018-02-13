@@ -50,11 +50,20 @@
       width: 100%;
       margin-bottom: 20px;
     }
-    span{
+    div{
       display: block;
       font-family: $latoLight;
       font-size: 48px;
       color: #ffb822;
     }
+
   }
+
+}
+.number{
+  opacity: 0;
+}
+.viz{
+  opacity: 1;
+  transition: 1s;
 }

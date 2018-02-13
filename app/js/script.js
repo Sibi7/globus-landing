@@ -1,40 +1,40 @@
 $(document).ready(function () {
 
     $('.owl-carousel-header').owlCarousel({
-        loop:true,
-        margin:0,
+        loop: true,
+        margin: 0,
         autoplay: true,
-        nav:false,
+        nav: false,
         dots: true,
         mouseDrag: false,
-        responsive:{
-            0:{
-                items:1
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:1
+            600: {
+                items: 1
             },
-            1000:{
-                items:1
+            1000: {
+                items: 1
             }
         }
     });
     $('.partners__wrap').owlCarousel({
-        loop:true,
-        margin:0,
+        loop: true,
+        margin: 0,
         autoplay: true,
-        nav:true,
+        nav: true,
         dots: false,
-        navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-        responsive:{
-            0:{
-                items:1
+        navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:3
+            600: {
+                items: 3
             },
-            1000:{
-                items:5
+            1000: {
+                items: 5
             }
         }
     });
@@ -42,11 +42,46 @@ $(document).ready(function () {
         $(this).toggleClass('active')
     });
 
-    $('.menu').click (function(){
+    $('.menu').click(function () {
         $(this).toggleClass('open');
         $('.sidebar').toggleClass('active-bar');
         $('body').toggleClass('overflow-hidden')
     });
+
+    var time = 2, cc = 1;
+
+    $(window).scroll(function () {
+        $('.progress__wrap').each(function () {
+            var
+                cPos = $(this).offset().top,
+                topWindow = $(window).scrollTop();
+
+            if (cPos < topWindow + 200) {
+                if (cc < 2) {
+                    $('.number').addClass('viz');
+                    $('div').each(function () {
+                        var
+                            i = 1,
+                            num = $(this).data('num'),
+                            step = 1000 * time / num,
+                            that = $(this),
+                            int = setInterval(function () {
+                                if (i <= num) {
+                                    that.html(i);
+                                }
+                                else {
+                                    cc = cc + 2;
+                                    clearInterval(int);
+                                }
+                                i++;
+                            }, step);
+                    });
+                }
+
+            }
+        });
+    });
+
 });
 var x, i, j, selElmnt, a, b, c;
 x = document.getElementsByClassName("custom-select");
@@ -61,7 +96,7 @@ for (i = 0; i < x.length; i++) {
     for (j = 1; j < selElmnt.length; j++) {
         c = document.createElement("DIV");
         c.innerHTML = selElmnt.options[j].innerHTML;
-        c.addEventListener("click", function(e) {
+        c.addEventListener("click", function (e) {
             var i, s, h;
             s = this.parentNode.parentNode.getElementsByTagName("select")[0];
             h = this.parentNode.previousSibling;
@@ -77,13 +112,14 @@ for (i = 0; i < x.length; i++) {
         b.appendChild(c);
     }
     x[i].appendChild(b);
-    a.addEventListener("click", function(e) {
+    a.addEventListener("click", function (e) {
         e.stopPropagation();
         closeAllSelect(this);
         this.nextSibling.classList.toggle("select-hide");
         this.classList.toggle("select-arrow-active");
     });
 }
+
 function closeAllSelect(elmnt) {
     var x, y, i, arrNo = [];
     x = document.getElementsByClassName("select-items");
@@ -101,29 +137,30 @@ function closeAllSelect(elmnt) {
         }
     }
 }
+
 document.addEventListener("click", closeAllSelect);
 
 
-
-(function($) {
+(function ($) {
 
         "use strict";
 
         var DEBUG = false, // make true to enable debug output
             PLUGIN_IDENTIFIER = "RangeSlider";
 
-        var RangeSlider = function( element, options ) {
+        var RangeSlider = function (element, options) {
             this.element = element;
             this.options = options || {};
             this.defaults = {
                 output: {
                     prefix: '', // function or string
                     suffix: '', // function or string
-                    format: function(output){
+                    format: function (output) {
                         return output;
                     }
                 },
-                change: function(event, obj){}
+                change: function (event, obj) {
+                }
             };
             // This next line takes advantage of HTML5 data attributes
             // to support customization of the plugin on a per-element
@@ -137,9 +174,9 @@ document.addEventListener("click", closeAllSelect);
             // Initializers
             ////////////////////////////////////////////////////
 
-            init: function() {
-                if(DEBUG && console) console.log('RangeSlider init');
-                this.config = $.extend( true, {}, this.defaults, this.options, this.metadata );
+            init: function () {
+                if (DEBUG && console) console.log('RangeSlider init');
+                this.config = $.extend(true, {}, this.defaults, this.options, this.metadata);
 
                 var self = this;
                 // Add the markup for the slider track
@@ -147,7 +184,7 @@ document.addEventListener("click", closeAllSelect);
                 this.trackIncluded = $('<div class="track track--included"></div>').appendTo(self.element);
                 this.inputs = [];
 
-                $('input[type="range"]', this.element).each(function(index, value) {
+                $('input[type="range"]', this.element).each(function (index, value) {
                     var rangeInput = this;
                     // Add the ouput markup to the page.
                     rangeInput.output = $('<output>').appendTo(self.element);
@@ -158,8 +195,8 @@ document.addEventListener("click", closeAllSelect);
                     // Store the initial val, incase we need to reset.
                     rangeInput.initialValue = $(this).val();
                     // Method to update the slider output text/position
-                    rangeInput.update = function() {
-                        if(DEBUG && console) console.log('RangeSlider rangeInput.update');
+                    rangeInput.update = function () {
+                        if (DEBUG && console) console.log('RangeSlider rangeInput.update');
                         var range = $(this).attr('max') - $(this).attr('min'),
                             offset = $(this).val() - $(this).attr('min'),
                             pos = offset / range * 100 + '%',
@@ -171,23 +208,23 @@ document.addEventListener("click", closeAllSelect);
                         // Update the HTML
                         $(rangeInput.output).html(prefix + '' + format + '' + suffix);
                         $(rangeInput.output).css('left', pos);
-                        $(rangeInput.output).css('transform', 'translate('+transPos+',0)');
+                        $(rangeInput.output).css('transform', 'translate(' + transPos + ',0)');
 
                         // Update the IE hack thumbs
                         $(rangeInput.thumb).css('left', pos);
-                        $(rangeInput.thumb).css('transform', 'translate('+transPos+',0)');
+                        $(rangeInput.thumb).css('transform', 'translate(' + transPos + ',0)');
 
                         // Adjust the track for the inputs
                         self.adjustTrack();
                     };
 
                     // Send the current ouput to the front for better stacking
-                    rangeInput.sendOutputToFront = function() {
+                    rangeInput.sendOutputToFront = function () {
                         $(this.output).css('z-index', rangeInput.output.zindex + 1);
                     };
 
                     // Send the current ouput to the back behind the other
-                    rangeInput.sendOutputToBack = function() {
+                    rangeInput.sendOutputToBack = function () {
                         $(this.output).css('z-index', rangeInput.output.zindex);
                     };
 
@@ -195,14 +232,14 @@ document.addEventListener("click", closeAllSelect);
                     // IE hack because pointer-events:none doesn't pass the
                     // event to the slider thumb, so we have to make our own.
                     ///////////////////////////////////////////////////
-                    $(rangeInput.thumb).on('mousedown', function(event){
+                    $(rangeInput.thumb).on('mousedown', function (event) {
                         // Send all output to the back
                         self.sendAllOutputToBack();
                         // Send this output to the front
                         rangeInput.sendOutputToFront();
                         // Turn mouse tracking on
                         $(this).data('tracking', true);
-                        $(document).one('mouseup', function() {
+                        $(document).one('mouseup', function () {
                             // Turn mouse tracking off
                             $(rangeInput.thumb).data('tracking', false);
                             // Trigger the change event
@@ -211,16 +248,16 @@ document.addEventListener("click", closeAllSelect);
                     });
 
                     // IE hack - track the mouse move within the input range
-                    $('body').on('mousemove', function(event){
+                    $('body').on('mousemove', function (event) {
                         // If we're tracking the mouse move
-                        if($(rangeInput.thumb).data('tracking')) {
+                        if ($(rangeInput.thumb).data('tracking')) {
                             var rangeOffset = $(rangeInput).offset(),
                                 relX = event.pageX - rangeOffset.left,
                                 rangeWidth = $(rangeInput).width();
                             // If the mouse move is within the input area
                             // update the slider with the correct value
-                            if(relX <= rangeWidth) {
-                                var val = relX/rangeWidth;
+                            if (relX <= rangeWidth) {
+                                var val = relX / rangeWidth;
                                 $(rangeInput).val(val * $(rangeInput).attr('max'));
                                 rangeInput.update();
                             }
@@ -228,8 +265,8 @@ document.addEventListener("click", closeAllSelect);
                     });
 
                     // Update the output text on slider change
-                    $(this).on('mousedown input change touchstart', function(event) {
-                        if(DEBUG && console) console.log('RangeSlider rangeInput, mousedown input touchstart');
+                    $(this).on('mousedown input change touchstart', function (event) {
+                        if (DEBUG && console) console.log('RangeSlider rangeInput, mousedown input touchstart');
                         // Send all output to the back
                         self.sendAllOutputToBack();
                         // Send this output to the front
@@ -239,8 +276,8 @@ document.addEventListener("click", closeAllSelect);
                     });
 
                     // Fire the onchange event
-                    $(this).on('mouseup touchend', function(event){
-                        if(DEBUG && console) console.log('RangeSlider rangeInput, change');
+                    $(this).on('mouseup touchend', function (event) {
+                        if (DEBUG && console) console.log('RangeSlider rangeInput, change');
                         self.change(event);
                     });
 
@@ -255,16 +292,16 @@ document.addEventListener("click", closeAllSelect);
                 return this;
             },
 
-            sendAllOutputToBack: function() {
-                $.map(this.inputs, function(input, index) {
+            sendAllOutputToBack: function () {
+                $.map(this.inputs, function (input, index) {
                     input.sendOutputToBack();
                 });
             },
 
-            change: function(event) {
-                if(DEBUG && console) console.log('RangeSlider change', event);
+            change: function (event) {
+                if (DEBUG && console) console.log('RangeSlider change', event);
                 // Get the values of each input
-                var values = $.map(this.inputs, function(input, index) {
+                var values = $.map(this.inputs, function (input, index) {
                     return {
                         value: parseInt($(input).val()),
                         min: parseInt($(input).attr('min')),
@@ -273,7 +310,7 @@ document.addEventListener("click", closeAllSelect);
                 });
 
                 // Sort the array by value, if we have 2 or more sliders
-                values.sort(function(a, b) {
+                values.sort(function (a, b) {
                     return a.value - b.value;
                 });
 
@@ -281,23 +318,23 @@ document.addEventListener("click", closeAllSelect);
                 this.config.change.call(this, event, values);
             },
 
-            reset: function() {
-                if(DEBUG && console) console.log('RangeSlider reset');
-                $.map(this.inputs, function(input, index) {
+            reset: function () {
+                if (DEBUG && console) console.log('RangeSlider reset');
+                $.map(this.inputs, function (input, index) {
                     $(input).val(input.initialValue);
                     input.update();
                 });
             },
 
-            adjustTrack: function() {
-                if(DEBUG && console) console.log('RangeSlider adjustTrack');
+            adjustTrack: function () {
+                if (DEBUG && console) console.log('RangeSlider adjustTrack');
                 var valueMin = Infinity,
                     rangeMin = Infinity,
                     valueMax = 0,
                     rangeMax = 0;
 
                 // Loop through all input to get min and max
-                $.map(this.inputs, function(input, index) {
+                $.map(this.inputs, function (input, index) {
                     var val = parseInt($(input).val()),
                         min = parseInt($(input).attr('min')),
                         max = parseInt($(input).attr('max'));
@@ -312,7 +349,7 @@ document.addEventListener("click", closeAllSelect);
 
                 // Get the difference if there are 2 range input, use max for one input.
                 // Sets left to 0 for one input and adjust for 2 inputs
-                if(this.inputs.length > 1) {
+                if (this.inputs.length > 1) {
                     this.trackIncluded.css('width', (valueMax - valueMin) / (rangeMax - rangeMin) * 100 + '%');
                     this.trackIncluded.css('left', (valueMin - rangeMin) / (rangeMax - rangeMin) * 100 + '%');
                 } else {
@@ -324,13 +361,13 @@ document.addEventListener("click", closeAllSelect);
 
         RangeSlider.defaults = RangeSlider.prototype.defaults;
 
-        $.fn.RangeSlider = function(options) {
-            if(DEBUG && console) console.log('$.fn.RangeSlider', options);
-            return this.each(function() {
+        $.fn.RangeSlider = function (options) {
+            if (DEBUG && console) console.log('$.fn.RangeSlider', options);
+            return this.each(function () {
                 var instance = $(this).data(PLUGIN_IDENTIFIER);
-                if(!instance) {
+                if (!instance) {
                     instance = new RangeSlider(this, options).init();
-                    $(this).data(PLUGIN_IDENTIFIER,instance);
+                    $(this).data(PLUGIN_IDENTIFIER, instance);
                 }
             });
         };
@@ -341,31 +378,30 @@ document.addEventListener("click", closeAllSelect);
 
 var rangeSlider = $('#facet-price-range-slider');
 var rangeSlider2 = $('#facet-area-range-slider');
-if(rangeSlider.length > 0) {
+if (rangeSlider.length > 0) {
     rangeSlider.RangeSlider({
         output: {
-            format: function(output){
+            format: function (output) {
                 return output.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
             },
-            suffix: function(input){
+            suffix: function (input) {
                 return parseInt($(input).val()) == parseInt($(input).attr('max')) ? this.config.maxSymbol : '';
             }
         }
     });
 }
 
-if(rangeSlider2.length > 0) {
+if (rangeSlider2.length > 0) {
     rangeSlider2.RangeSlider({
         output: {
-            format: function(output){
+            format: function (output) {
                 return output.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
             },
-            suffix: function(input){
+            suffix: function (input) {
                 return parseInt($(input).val()) == parseInt($(input).attr('max')) ? this.config.maxSymbol : '';
             }
         }
     });
 }
-
 
 

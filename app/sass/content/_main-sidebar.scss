@@ -24,16 +24,10 @@
   &__phone-number{
     width: 100%;
     float: left;
-    span{
-      font-family: $latoBold;
-      display: block;
-      color: #d1b374;
-      line-height: 28px;
-    }
     a{
       color: #ffffff;
       font-family: $latoLight;
-      font-size: 14px;
+      font-size: 21px;
     }
   }
   &__discount-btn{
@@ -46,6 +40,7 @@
     text-transform: uppercase;
     border: 1px solid #b89855;
     transition: 200ms ease;
+    animation: out 2s infinite ease-out;
     &:hover{
       color: #fff;
       border-color: #fff;
@@ -99,6 +94,7 @@
         &:hover{
           color: #d1b374;
           transition: 200ms ease;
+          padding-left: 15px;
         }
       }
     }
@@ -160,4 +156,8 @@
 }
 .overflow-hidden{
   overflow: hidden;
+}
+@keyframes out {
+  0% {box-shadow: 0 0 0 0 rgba(184, 152, 85, 1);}
+  100% {box-shadow: 0 0 0 15px rgba(184, 152, 85, .05);}
 }
