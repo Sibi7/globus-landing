@@ -39,6 +39,12 @@
         font-size: 14px;
         font-weight: 300;
         line-height: 28px;
+        display: inline-block;
+        width: 100%;
+        &:hover{
+          color: #d1b374;
+          transition: 200ms ease;
+        }
 
       }
       svg {

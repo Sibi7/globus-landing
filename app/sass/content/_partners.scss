@@ -1,9 +1,9 @@
-.partners{
+.partners {
   position: relative;
   width: 100%;
   float: left;
   background: #fff;
-  &__title{
+  &__title {
     color: #030621;
     font-family: $latoBlack;
     font-size: 24px;
@@ -11,7 +11,7 @@
     position: relative;
     margin: 60px auto;
     text-align: center;
-    &:after{
+    &:after {
       content: '';
       position: absolute;
       display: block;
@@ -21,36 +21,36 @@
       height: 4px;
       background-color: #edb132;
       top: 40px;
-      @include breakpoint(max-width 770px){
+      @include breakpoint(max-width 770px) {
         top: 70px;
       }
     }
   }
-  &__wrap{
+  &__wrap {
     position: relative;
     width: 850px;
     margin: 0 auto 60px auto;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       width: 100%;
     }
   }
-  &__item{
+  &__item {
     width: 155px;
     height: 80px;
     margin: 0 10px;
     display: block;
     float: left;
-    @include breakpoint(max-width 770px){
+    @include breakpoint(max-width 770px) {
       float: none;
       margin: 0 auto;
     }
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
   }
-  &__contacts{
+  &__contacts {
     position: relative;
     display: flex;
     justify-content: center;
@@ -59,57 +59,75 @@
     padding: 10px;
     width: 100%;
     background-color: #0e112f;
-    .sidebar__feedback{
+    .sidebar__feedback {
       width: auto;
       margin-bottom: 0;
     }
-    span{
+    span {
       color: #ffffff;
       font-size: 14px;
-      @include breakpoint(max-width 770px){
+      @include breakpoint(max-width 770px) {
         margin-bottom: 20px;
       }
     }
-    .btn-phone{
+    .btn-phone {
       padding: 10px;
       background-color: #edb132;
       color: #0e112f;
       font-family: $latoBlack;
       font-size: 15px;
+      animation: btn 5s infinite ease;
       font-weight: 700;
       margin-left: 10px;
       margin-right: 20px;
       transition: 200ms ease;
-      @include breakpoint(max-width 770px){
+      @include breakpoint(max-width 770px) {
         margin-bottom: 20px;
       }
-      &:hover{
+      &:hover {
         background: lighten(#edb132, 10%);
         transition: 200ms ease;
       }
+      span {
+        color: #0e112f;
+      }
     }
   }
-  .owl-nav{
+  .owl-nav {
     position: absolute;
     top: 30%;
     width: 100%;
   }
-  .owl-prev{
+  .owl-prev {
     position: absolute;
     left: -50px;
     color: #edb132;
     font-size: 35px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       left: 10px;
     }
   }
-  .owl-next{
+  .owl-next {
     position: absolute;
     right: -50px;
     color: #edb132;
     font-size: 35px;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       right: 10px;
     }
+  }
+}
+
+@keyframes btn {
+  0% {
+    transform: rotateY(360deg);
+
+  }
+  50% {
+    transform: rotateY(0);
+    box-shadow: 0 0 0 0 rgba(184, 152, 85, 1);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(184, 152, 85, .05);
   }
 }
