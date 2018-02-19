@@ -1,0 +1,25 @@
+.crumbs{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__link{
+    display: flex;
+    padding: 0;
+    margin: 20px 0 0 40px;
+    list-style: none;
+    li{
+      a{
+        color: #b89855;
+        font-family: $latoLight;
+        font-size: 13px;
+        .fa-chevron-right{
+          font-size: 10px;
+          color: #030621;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}

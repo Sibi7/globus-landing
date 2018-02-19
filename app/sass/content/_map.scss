@@ -1,6 +1,48 @@
-.map{
+.map {
   position: relative;
   float: left;
   width: 100%;
-  height: 365px;
+  &__wrapper {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    background-color: #b89855;
+  }
+  &__btn {
+    position: relative;
+    width: 275px;
+    height: 42px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 41px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    padding-right: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 7px;
+      background: url("../img/icons/arrow-up.svg") no-repeat center center;
+      right: 15px;
+      top: 15px;
+    }
+  }
+  &__title {
+    text-align: center;
+    color: #030621;
+    font-family: $latoBlack;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 40px 0;
+    span {
+      color: #edb132;
+
+    }
+  }
 }

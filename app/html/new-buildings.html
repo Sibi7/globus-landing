@@ -1,83 +1,180 @@
-<section class="new-buildings">
-    <h2 class="new-buildings__title">НОВОСТРОЙКИ <span>МОСКВЫ И МО</span></h2>
-    <div class="new-buildings__wrap">
-        <div class="housing__item" style="background-image: url(img/8.jpg)">
-            <div class="housing__content">
-                <h2 class="housing__title">ЖК “новотроицкий”</h2>
-            </div>
-        </div>
-        <ul class="new-buildings__description">
-            <li>Адрес:<span>Россия, Москва, Дмитровское шоссе,</span></li>
-            <li>Метро:<span>Алтуфьево</span></li>
-            <li>Площадь:<span>31.0 м<sup>2</sup> - 113.0 м<sup>2</sup></span></li>
-            <li>Сдача дома:<span>4 квартал 2018 года.</span></li>
-            <li>Стоимость:<span>от 4 750 074 до 15 978 177 руб.</span></li>
-        </ul>
-    </div>
+<section class="property-selection">
 
-    <div class="new-buildings__wrap">
-        <div class="housing__item" style="background-image: url(img/8.jpg)">
-            <div class="housing__content">
-                <h2 class="housing__title">ЖК “новотроицкий”</h2>
-            </div>
-        </div>
-        <ul class="new-buildings__description">
-            <li>Адрес:<span>Россия, Москва, Дмитровское шоссе,</span></li>
-            <li>Метро:<span>Алтуфьево</span></li>
-            <li>Площадь:<span>31.0 м<sup>2</sup> - 113.0 м<sup>2</sup></span></li>
-            <li>Сдача дома:<span>4 квартал 2018 года.</span></li>
-            <li>Стоимость:<span>от 4 750 074 до 15 978 177 руб.</span></li>
-        </ul>
-    </div>
+    <form action="#">
 
-    <div class="new-buildings__wrap">
-        <div class="housing__item" style="background-image: url(img/8.jpg)">
-            <div class="housing__content">
-                <h2 class="housing__title">ЖК “новотроицкий”</h2>
-            </div>
-        </div>
-        <ul class="new-buildings__description">
-            <li>Адрес:<span>Россия, Москва, Дмитровское шоссе,</span></li>
-            <li>Метро:<span>Алтуфьево</span></li>
-            <li>Площадь:<span>31.0 м<sup>2</sup> - 113.0 м<sup>2</sup></span></li>
-            <li>Сдача дома:<span>4 квартал 2018 года.</span></li>
-            <li>Стоимость:<span>от 4 750 074 до 15 978 177 руб.</span></li>
-        </ul>
-    </div>
+        <div class="property-selection__range-slide">
 
-    <div class="new-buildings__wrap">
-        <div class="housing__item" style="background-image: url(img/8.jpg)">
-            <div class="housing__content">
-                <h2 class="housing__title">ЖК “новотроицкий”</h2>
-            </div>
-        </div>
-        <ul class="new-buildings__description">
-            <li>Адрес:<span>Россия, Москва, Дмитровское шоссе,</span></li>
-            <li>Метро:<span>Алтуфьево</span></li>
-            <li>Площадь:<span>31.0 м<sup>2</sup> - 113.0 м<sup>2</sup></span></li>
-            <li>Сдача дома:<span>4 квартал 2018 года.</span></li>
-            <li>Стоимость:<span>от 4 750 074 до 15 978 177 руб.</span></li>
-        </ul>
-    </div>
+            <span class="title-range">Стоимость, руб.</span>
 
-    <div class="new-buildings__wrap">
-        <div class="housing__item" style="background-image: url(img/8.jpg)">
-            <div class="housing__content">
-                <h2 class="housing__title">ЖК “новотроицкий”</h2>
+            <div class="range-slider" id="facet-price-range-slider" data-options='{"output":{"prefix":""},"maxSymbol":"+"}'>
+                <input name="range-1" value="5000000" min="0" max="10000000" step="1" type="range">
+                <input name="range-2" value="9300000" min="0" max="10000000" step="1" type="range">
+                <span class="label"></span>
+            </div>
+
+
+        </div>
+
+        <div class="property-selection__range-slide">
+            <span class="title-range">Площадь, м<sup>2</sup></span>
+            <div class="range-slider " id="facet-area-range-slider" data-options='{"output":{"prefix":""},"maxSymbol":"+"}'>
+                <input name="range-1" value="70" min="0" max="140" step="1" type="range">
+                <input name="range-2" value="120" min="0" max="140" step="1" type="range">
+                <span class="label"></span>
+            </div>
+
+
+
+        </div>
+        <div class="new-building-selection">
+            <div class="property-selection__rooms">
+                <span class="title-range">Кол-во комнат:</span>
+                <div class="property-selection__numbers">1</div>
+                <div class="property-selection__numbers active">2</div>
+                <div class="property-selection__numbers">3</div>
+                <div class="property-selection__numbers">4+</div>
+            </div>
+            <span>Найдено 1645 квартир</span>
+            <a href="#" class="btn-white">Показать</a>
+        </div>
+
+    </form>
+
+</section>
+<section class="build">
+    <div class="build__item">
+        <div class="build__img" style="background-image: url(img/new-build/1.png)">
+            <a href="#" class="build__btn-sale">Скидки</a>
+            <a href="#" class="build__start-sales">Старт продаж</a>
+            <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
+        </div>
+        <div class="build__desc">
+            <h2 class="build__title">ЖК UP-Квартал римский</h2>
+            <div class="build__desc-wrap">
+                <div class="build__location">
+                    <span>Видное</span>
+                    м. Домодедовская
+                </div>
+                <div class="build__price">
+                    <span> от <b>900</b> тыс. руб.</span>
+                    Срок сдачи: 2кв. 2018г.
+                </div>
+                <a href="#" class="build__btn">Смотреть на карте</a>
+                <a href="#" class="build__btn">Подробнее</a>
             </div>
         </div>
-        <ul class="new-buildings__description">
-            <li>Адрес:<span>Россия, Москва, Дмитровское шоссе,</span></li>
-            <li>Метро:<span>Алтуфьево</span></li>
-            <li>Площадь:<span>31.0 м<sup>2</sup> - 113.0 м<sup>2</sup></span></li>
-            <li>Сдача дома:<span>4 квартал 2018 года.</span></li>
-            <li>Стоимость:<span>от 4 750 074 до 15 978 177 руб.</span></li>
-        </ul>
     </div>
-    <div class="new-buildings__pagination">
-        <a href="#">Смотреть все</a>
+    <div class="build__item">
+        <div class="build__img" style="background-image: url(img/new-build/1.png)">
+            <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
+        </div>
+        <div class="build__desc">
+            <h2 class="build__title">ЖК UP-Квартал римский</h2>
+            <div class="build__desc-wrap">
+                <div class="build__location">
+                    <span>Видное</span>
+                    м. Домодедовская
+                </div>
+                <div class="build__price">
+                    <span> от <b>900</b> тыс. руб.</span>
+                    Срок сдачи: 2кв. 2018г.
+                </div>
+                <a href="#" class="build__btn">Смотреть на карте</a>
+                <a href="#" class="build__btn">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="build__item">
+        <div class="build__img" style="background-image: url(img/new-build/1.png)">
+            <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
+        </div>
+        <div class="build__desc">
+            <h2 class="build__title">ЖК UP-Квартал римский</h2>
+            <div class="build__desc-wrap">
+                <div class="build__location">
+                    <span>Видное</span>
+                    м. Домодедовская
+                </div>
+                <div class="build__price">
+                    <span> от <b>900</b> тыс. руб.</span>
+                    Срок сдачи: 2кв. 2018г.
+                </div>
+                <a href="#" class="build__btn">Смотреть на карте</a>
+                <a href="#" class="build__btn">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="build__item">
+        <div class="build__img" style="background-image: url(img/new-build/1.png)">
+            <a href="#" class="build__start-sales">Старт продаж</a>
+            <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
+        </div>
+        <div class="build__desc">
+            <h2 class="build__title">ЖК UP-Квартал римский</h2>
+            <div class="build__desc-wrap">
+                <div class="build__location">
+                    <span>Видное</span>
+                    м. Домодедовская
+                </div>
+                <div class="build__price">
+                    <span> от <b>900</b> тыс. руб.</span>
+                    Срок сдачи: 2кв. 2018г.
+                </div>
+                <a href="#" class="build__btn">Смотреть на карте</a>
+                <a href="#" class="build__btn">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="build__item">
+        <div class="build__img" style="background-image: url(img/new-build/1.png)">
+            <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
+        </div>
+        <div class="build__desc">
+            <h2 class="build__title">ЖК UP-Квартал римский</h2>
+            <div class="build__desc-wrap">
+                <div class="build__location">
+                    <span>Видное</span>
+                    м. Домодедовская
+                </div>
+                <div class="build__price">
+                    <span> от <b>900</b> тыс. руб.</span>
+                    Срок сдачи: 2кв. 2018г.
+                </div>
+                <a href="#" class="build__btn">Смотреть на карте</a>
+                <a href="#" class="build__btn">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="build__item">
+        <div class="build__img" style="background-image: url(img/new-build/1.png)">
+            <a href="#" class="build__start-sales">Старт продаж</a>
+            <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
+        </div>
+        <div class="build__desc">
+            <h2 class="build__title">ЖК UP-Квартал римский</h2>
+            <div class="build__desc-wrap">
+                <div class="build__location">
+                    <span>Видное</span>
+                    м. Домодедовская
+                </div>
+                <div class="build__price">
+                    <span> от <b>900</b> тыс. руб.</span>
+                    Срок сдачи: 2кв. 2018г.
+                </div>
+                <a href="#" class="build__btn">Смотреть на карте</a>
+                <a href="#" class="build__btn">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="build__pagination">
         <a href="#">1</a>
         <a href="#" class="active">2</a>
         <a href="#">3</a>
+        <a href="#">4</a>
+    </div>
+    <div class="partners__contacts">
+        <span>Узнать больше по телефону:</span>
+        <a href="tel:+74993905571" class="btn-phone"><span>+7 (499) 390-55-71</span></a>
+        <a href="#" class="sidebar__feedback">Заказать обратный звонок</a>
     </div>
 </section>
