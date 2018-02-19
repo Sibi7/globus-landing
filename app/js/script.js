@@ -56,14 +56,14 @@ $(document).ready(function () {
                 cPos = $(this).offset().top,
                 topWindow = $(window).scrollTop();
 
-            if (cPos < topWindow + 200) {
+            if (cPos < topWindow + 300) {
                 if (cc < 2) {
                     $('.number').addClass('viz');
                     $('div').each(function () {
                         var
                             i = 1,
                             num = $(this).data('num'),
-                            step = 1000 * time / num,
+                            step = 100 * time / num,
                             that = $(this),
                             int = setInterval(function () {
                                 if (i <= num) {

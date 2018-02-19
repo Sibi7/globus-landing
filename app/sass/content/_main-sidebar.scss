@@ -138,9 +138,35 @@
       color: #b89855;
       font-size: 17px;
       transition: 200ms ease;
-      &:hover{
-        color: #fff;
-        transition: 200ms ease;
+      .fa-facebook-f{
+        &:hover{
+          transition: 200ms ease;
+          color: #4167b2;
+        }
+      }
+      .fa-vk{
+          &:hover{
+            transition: 200ms ease;
+            color: #6e92b6;
+          }
+        }
+      .fa-instagram{
+        &:hover{
+          transition: 200ms ease;
+          color: #e35e79;
+        }
+      }
+      .fa-google-plus-g{
+        &:hover{
+          transition: 200ms ease;
+          color: #cc4238;
+        }
+      }
+      .fa-youtube{
+        &:hover{
+          transition: 200ms ease;
+          color: #fe0000;
+        }
       }
     }
   }

@@ -91,6 +91,22 @@
     margin: 20px 0;
     position: relative;
     text-align: center;
+    .label{
+      position: absolute;
+      left: 3px;
+      top: 21px;
+      height: 11px;
+      width: 1px;
+      background: #b89855;
+      &:before{
+        content: '0';
+        position: absolute;
+        top: 17px;
+        left: -3px;
+        color: #b89855;
+        font-size: 12px;
+      }
+    }
   }
   .range-slider:before, .range-slider:after {
     content: " ";
@@ -106,6 +122,7 @@
     position: absolute;
     width: 0;
     z-index: 50;
+
   }
   @media (min-width: 640px) {
     .range-slider .track {
@@ -120,9 +137,29 @@
   .range-slider .track--full {
     background: #fff;
     width: 100%;
+    &:before{
+      content: '';
+      position: absolute;
+      right: 2px;
+      top: 10px;
+      height: 11px;
+      width: 1px;
+      background: #b89855;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 10px;
+      height: 11px;
+      width: 1px;
+      background: #b89855;
+    }
   }
   .range-slider .track--included {
-    background: #b89855;;
+    background: #b89855;
+
   }
   .range-slider .slider-thumb {
     border-radius: 50%;
@@ -137,6 +174,7 @@
     position: absolute;
     z-index: 101;
   }
+
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .range-slider .slider-thumb {
       display: block;

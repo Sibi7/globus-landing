@@ -33,10 +33,15 @@
       width: 100%;
       height: 100%;
       background: rgba(3, 6, 33, .6);
+      transition: 200ms ease;
     }
     &:hover {
       .housing__title:after {
         width: 100%;
+      }
+      &:before{
+        background: rgba(3, 6, 33, .4);
+        transition: 200ms ease;
       }
       background-size: 110%;
       transition: 500ms ease;
@@ -102,7 +107,7 @@
     @include breakpoint(max-width 770px){
       width: 100%;
       padding: 10px;
-      height: 200;
+      height: 200px;
       margin-bottom: 10px;
 
     }
@@ -116,7 +121,10 @@
       }
       background-size: 110%;
       transition: 500ms ease;
-
+      &:before{
+        background: rgba(3,6,33, .4);
+        transition: 200ms ease;
+      }
     }
     &:before {
       content: '';
@@ -154,7 +162,10 @@
       }
       background-size: 110%;
       transition: 500ms ease;
-
+      &:before{
+        background: rgba(3,6,33, .4);
+        transition: 200ms ease;
+      }
     }
     &:before {
       content: '';
@@ -166,6 +177,7 @@
       width: 100%;
       height: 100%;
       background: rgba(3, 6, 33, .6);
+      transition: 200ms ease;
     }
   }
   &__content {
