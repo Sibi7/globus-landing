@@ -82,6 +82,12 @@ $(document).ready(function () {
         });
     });
 
+    $( ".map__btn" ).click(function() {
+        $( ".map__wrap" ).slideToggle( "slow", function() {
+        });
+        $('.map__btn').toggleClass('active');
+    });
+
 });
 var x, i, j, selElmnt, a, b, c;
 x = document.getElementsByClassName("custom-select");
