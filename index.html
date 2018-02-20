@@ -6,6 +6,8 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <title>Globus Estate</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
     <link href="css/libs.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.min.css" rel="stylesheet" type="text/css">
 
@@ -272,13 +274,14 @@
 
         <div class="property-selection__range-slide">
 
-            <span class="title-range">Стоимость, руб.</span>
+            <span class="title-range">Стоимость, руб., дол., евро</span>
+            <div class="slider"></div>
 
-            <div class="range-slider" id="facet-price-range-slider" data-options='{"output":{"prefix":""},"maxSymbol":"+"}'>
+            <!-- <div class="range-slider" id="facet-price-range-slider" data-options='{"output":{"prefix":""},"maxSymbol":"+"}'>
                 <input name="range-1" value="5000000" min="0" max="10000000" step="1" type="range">
                 <input name="range-2" value="9300000" min="0" max="10000000" step="1" type="range">
                 <span class="label"></span>
-            </div>
+            </div> -->
 
             <div class="custom-select">
                 <select>
@@ -309,11 +312,12 @@
 
         <div class="property-selection__range-slide">
             <span class="title-range">Площадь, м<sup>2</sup></span>
-            <div class="range-slider " id="facet-area-range-slider" data-options='{"output":{"prefix":""},"maxSymbol":"+"}'>
+            <div class="slider_area"></div>
+            <!-- <div class="range-slider " id="facet-area-range-slider" data-options='{"output":{"prefix":""},"maxSymbol":"+"}'>
                 <input name="range-1" value="70" min="0" max="140" step="1" type="range">
                 <input name="range-2" value="120" min="0" max="140" step="1" type="range">
                 <span class="label"></span>
-            </div>
+            </div> -->
 
             <div class="property-selection__rooms">
                 <span class="title-range">Кол-во комнат:</span>
@@ -434,6 +438,8 @@
 
 <!-- start html_close.html-->
 <script src='js/jquery-3.2.1.js'></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script src="js/jquery-ui-slider-pips.js"></script>
 <script src='js/owl.carousel.min.js'></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <script src="js/script.min.js"></script>
