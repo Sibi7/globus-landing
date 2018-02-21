@@ -168,6 +168,13 @@
           color: #fe0000;
         }
       }
+
+      .fa-twitter {
+        &:hover {
+          transition: 200ms ease;
+          color: #1da1f2;
+        }
+      }
     }
   }
 }

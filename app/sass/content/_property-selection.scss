@@ -78,10 +78,14 @@
     float: left;
     width: 48%;
     @include breakpoint(max-width 770px){
-      width: 100%;
+      width: 99%;
     }
   }
+  &__range-slide_area {
+    margin-top: 10px;
+  }
 .title-range{
+  margin-right: 10px;
   color: #b89855;
   font-size: 14px;
   font-family: $latoBold;
@@ -382,7 +386,7 @@
       margin-top: 20px;
       margin-bottom: 20px;
 
-      &:nth-of-type(2){
+      &:nth-of-type(3){
         margin-top: 60px;
         margin-bottom: 0;
       }
@@ -399,4 +403,32 @@
 .slider,
 .slider_area {
   max-width: 98%;
+}
+
+.header-range {
+  display: flex;
+  align-items: center;
+
+  &__btns {
+    display: flex;
+  }
+
+  &__btn {
+    display: block;
+    width: 33px;
+    padding: 5px 0;
+    color: #b89855;
+    background-color: transparent;
+    border: 1px solid #b89855;
+    border-left: none;
+
+    &:first-child {
+      border-left: 1px solid #b89855;
+    }
+  }
+
+  &__btn_active {
+    background-color: #b89855;
+    color: white;
+  }
 }
