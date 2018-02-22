@@ -159,7 +159,8 @@ $(".slider")
         suffix: " млн."
     })
     .slider("float", {
-        rest: "label"
+        rest: "label",
+        suffix: " млн."
     });
 
 $(".slider_area")
@@ -175,35 +176,5 @@ $(".slider_area")
         suffix: " м<sup>2</sup>"
     })
     .slider("float", {
-        rest: "label"
+        suffix: " м<sup>2</sup>"
     });
-
-function hideFirstPip() {
-    $(this).siblings('.ui-slider-pip-initial-1').addClass('inactivePip');
-}
-
-function hideSeconsPip() {
-    $(this).siblings('.ui-slider-pip-initial-2').addClass('inactivePip');
-}
-
-function showSecondPip() {
-    $(this).siblings('.ui-slider-pip-initial-1').removeClass('inactivePip');
-}
-
-function showFirstPip() {
-    $(this).siblings('.ui-slider-pip-initial-2').removeClass('inactivePip');
-}
-
-
-
-$(document).on('mousedown', '.ui-slider-handle:first', hideFirstPip);
-   
-$(document).on('mousedown', '.ui-slider-handle:eq(1)', hideSeconsPip);
-
-$(document).on('mousedown', '.ui-slider-handle:eq(2)', hideFirstPip);
-
-$(document).on('mousedown', '.ui-slider-handle:last', hideSeconsPip);
-
-$(document).on('mouseup', '.ui-slider-handle', showFirstPip);
-
-$(document).on('mouseup', '.ui-slider-handle', showSecondPip);

@@ -93,29 +93,45 @@
 
         <div class="property-selection__range-slide">
 
-            <span class="title-range">Стоимость, руб.</span>
-
-            <div class="range-slider" id="facet-price-range-slider" data-options='{"output":{"prefix":""},"maxSymbol":"+"}'>
-                <input name="range-1" value="5000000" min="0" max="10000000" step="1" type="range">
-                <input name="range-2" value="9300000" min="0" max="10000000" step="1" type="range">
-                <span class="label"></span>
+            <div class="header-range">
+                <span class="title-range">Стоимость:</span>
+                <div class="header-range__btns">
+                    <button class="header-range__btn header-range__btn_active"><i class="fas fa-ruble-sign"></i></button><button class="header-range__btn">$</button><button class="header-range__btn">&#8364;</button>
+                </div>
             </div>
+            <div class="slider"></div>
 
+            <div class="custom-select">
+                <select>
+                    <option value="0">Выберете регион</option>
+                    <option value="1">в Ростовской обл.</option>
+                    <option value="2">в Московской обл.</option>
+                    <option value="3">в Ростовской обл.</option>
+                    <option value="4">в Московской обл.</option>
+                    <option value="5">в Ростовской обл.</option>
+                    <option value="6">в Московской обл.</option>
+                    <option value="7">в Ростовской обл.</option>
+                </select>
+            </div>
+            <div class="custom-select">
+                <select>
+                    <option value="0">Вся недвижимость</option>
+                    <option value="1">Апартаменты</option>
+                    <option value="2">Апартаменты</option>
+                    <option value="3">Апартаменты</option>
+                    <option value="4">Апартаменты</option>
+                    <option value="5">Апартаменты</option>
+                    <option value="6">Апартаменты</option>
+                    <option value="7">Апартаменты</option>
+                </select>
+            </div>
 
         </div>
 
-        <div class="property-selection__range-slide">
+        <div class="property-selection__range-slide property-selection__range-slide_area">
             <span class="title-range">Площадь, м<sup>2</sup></span>
-            <div class="range-slider " id="facet-area-range-slider" data-options='{"output":{"prefix":""},"maxSymbol":"+"}'>
-                <input name="range-1" value="70" min="0" max="140" step="1" type="range">
-                <input name="range-2" value="120" min="0" max="140" step="1" type="range">
-                <span class="label"></span>
-            </div>
+            <div class="slider_area"></div>
 
-
-
-        </div>
-        <div class="new-building-selection">
             <div class="property-selection__rooms">
                 <span class="title-range">Кол-во комнат:</span>
                 <div class="property-selection__numbers">1</div>
@@ -123,13 +139,14 @@
                 <div class="property-selection__numbers">3</div>
                 <div class="property-selection__numbers">4+</div>
             </div>
-            <span>Найдено 1645 квартир</span>
-            <a href="#" class="btn-white">Показать</a>
+
         </div>
 
+        <a href="#" class="btn-white">показать</a>
     </form>
 
 </section>
+
 <section class="build">
     <div class="build__item">
         <div class="build__img" style="background-image: url(img/new-build/1.png)">
