@@ -30,11 +30,11 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            600: {
+            320: {
                 items: 3
             },
             1000: {
-                items: 5
+                items: 4
             }
         }
     });
@@ -89,6 +89,16 @@ $(document).ready(function () {
     });
 
     $('.aside-content__form-tel').inputmask({ alias: "phoneru"});
+
+    $(window).resize(function () {
+        if ($(window).width() < 770) {
+            $('.housing__item-text').after($('.property-selection'))
+        }
+    })
+    if ($(window).width() < 770) {
+        $('.housing__item-text').after($('.property-selection'))
+    }
+
 
 });
 var x, i, j, selElmnt, a, b, c;
@@ -163,7 +173,8 @@ $(".slider")
     .slider("float", {
         rest: "label",
         suffix: " млн."
-    });
+    })
+    .draggable();
 
 $(".slider_area")
     .slider({ 
@@ -179,4 +190,5 @@ $(".slider_area")
     })
     .slider("float", {
         suffix: " м<sup>2</sup>"
-    });
+    })
+    .draggable();

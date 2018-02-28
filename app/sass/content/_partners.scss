@@ -28,7 +28,7 @@
   }
   &__wrap {
     position: relative;
-    width: 850px;
+    width: calc(100% - 100px);
     margin: 0 auto 60px auto;
     @include breakpoint(max-width 992px) {
       width: 100%;
@@ -43,6 +43,11 @@
     @include breakpoint(max-width 770px) {
       float: none;
       margin: 0 auto;
+      width: 100px;
+      height: 60px;
+    }
+    @include breakpoint(max-width 500px) {
+      width: 80px;
     }
     img {
       width: 100%;
