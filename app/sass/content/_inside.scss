@@ -1,7 +1,3 @@
-.head_inside {
-	float: none;
-}
-
 .head__title {
 	font-size: 24px;
 	text-align: center;
@@ -17,6 +13,9 @@
 	font-size: 36px;
 	color: #ffe9ba;
 	background-color: #0e112f;
+	@include breakpoint(max-width 600px) {
+		font-size: 24px;
+	}
 }
 
 .head__slider--description_inside {
@@ -24,6 +23,9 @@
 	bottom: 70px;
 	left: 0;
 	width: auto;
+	@include breakpoint(max-width 600px) {
+		transform: translate(0, 0);
+	}
 }
 
 .head__slider_inside::before {
@@ -37,23 +39,75 @@
 	flex-wrap: wrap;
 	padding: 40px;
 	background-color: #f2f2f4;
-
+	@include breakpoint(max-width 1080px){
+		justify-content: space-around;
+	}
 	&__wrap {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 65%;
+		@include breakpoint(max-width 1080px){
+			width: 100%;
+		}
+		@include breakpoint(max-width 600px){
+			flex-direction: column;
+		}
 	}
+
+	&__address {
+		font-family: 'Playfair Display', serif;
+		color: #b89855;
+		.address__title {
+			display: block;
+			margin: 10px 0;
+			font-weight: 400;
+			font-style: italic;
+			font-size: 24px;
+		}
+		.address__text {
+			margin: 5px 0;
+			font-weight: 400;
+			font-style: italic;
+		}
+	}
+	&__cost {
+		.cost__text {
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-family: Lato, sans-serif;
+			font-size: 16px;
+			text-align: right;
+			color: #030621;
+			@include breakpoint(max-width 600px){
+				text-align: left;
+			}
+		}
+		.cost__number {
+			font-size: 28px;
+		}
+	}
+
+	&__map-btn {
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 200px;
+		height: 45px;
+		color: #b89855;
+		font-size: 13px;
+		text-transform: uppercase;
+		border: 1px solid #b89855;
+		background-color: transparent;
+		@include breakpoint(max-width 1080px){
+			margin-top: 40px;
+		}
+	}
+
+
+
 }
 
-.address__title {
-	font-family: 'Playfair Display', serif;
-	font-weight: 400;
-	font-style: italic;
-	font-size: 24px;
-}
 
-.address__text {
-	font-family: 'Playfair Display', serif;
-	font-weight: 400;
-	font-style: italic;
-	color: #b89855;
-}

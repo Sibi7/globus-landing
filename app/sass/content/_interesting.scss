@@ -1,0 +1,76 @@
+.interesting {
+  &__title {
+    font-family: $latoBlack;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    &_colored {
+      color: #ecb133;
+    }
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-around;
+    @include breakpoint(max-width 1350px){
+      flex-wrap: wrap;
+    }
+    .build__item_interesting {
+      @include breakpoint(max-width 1350px){
+        width: 50%;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
+    }
+    .build__img {
+      background-size: cover!important;
+    }
+  }
+  &__call {
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e112f;
+    @include breakpoint(max-width 700px) {
+      flex-direction: column;
+    }
+    &-text {
+      display: block;
+      margin: 0 10px;
+      font-family: $latoBold;
+      font-size: 14px;
+      color: #fff;
+      @include breakpoint(max-width 700px) {
+        margin-bottom: 10px;
+      }
+    }
+    &-phone {
+      display: block;
+      margin: 0 10px;
+      padding: 10px;
+      font-family: $latoBold;
+      font-size: 14px;
+      color: #0e112f;
+      background-color: #edb132;
+      @include breakpoint(max-width 700px) {
+        margin-bottom: 10px;
+      }
+    }
+    &-btn {
+      display: block;
+      margin: 0 10px;
+      background-color: transparent;
+      border: none;
+      color: $gold;
+      cursor: pointer;
+      @include breakpoint(max-width 700px) {
+        margin-bottom: 10px;
+      }
+      span {
+        padding-left: 5px;
+      }
+    }
+  }
+}
