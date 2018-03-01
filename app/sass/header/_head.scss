@@ -54,7 +54,7 @@
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   position: absolute;
-  width: 40px;
+  width: 25px;
   height: 4px;
   top: 25px;
   background-color: #b89855;
@@ -63,33 +63,31 @@
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   position: absolute;
-  width: 40px;
+  width: 25px;
   height: 4px;
   background-color: #b89855;
   content: "";
-  top: -15px;
+  top: -10px;
 }
 .btn5 .icon:after {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   position: absolute;
-  width: 40px;
+  width: 25px;
   height: 4px;
   background-color: #b89855;
   content: "";
-  top: 15px;
+  top: 10px;
 }
 .btn5.open .icon {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .btn5.open .icon:before {
-  -webkit-transform: rotateZ(-45deg) scaleX(0.75) translate(-20px, -6px);
-  transform: rotateZ(-45deg) scaleX(0.75) translate(-20px, -6px);
+  transform: rotateZ(-45deg) scaleX(0.75) translate(-15px, -4px);
 }
 .btn5.open .icon:after {
-  -webkit-transform: rotateZ(45deg) scaleX(0.75) translate(-20px, 6px);
-  transform: rotateZ(45deg) scaleX(0.75) translate(-20px, 6px);
+  transform: rotateZ(45deg) scaleX(0.75) translate(-15px, 4px);
 }
 .btn5:hover {
   cursor: pointer;

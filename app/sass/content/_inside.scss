@@ -3,7 +3,11 @@
 	text-align: center;
 	text-transform: uppercase;
 }
-
+.transformX-0 {
+	@include breakpoint(max-width 1024px) {
+		transform: translateX(0)!important;
+	}
+}
 .head__slider--description  .inside-slide__title {
 	margin-bottom: 0;
 	padding: 20px 40px;
@@ -14,7 +18,7 @@
 	color: #ffe9ba;
 	background-color: #0e112f;
 	@include breakpoint(max-width 600px) {
-		font-size: 24px;
+		font-size: 14px;
 	}
 }
 
