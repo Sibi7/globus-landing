@@ -1,0 +1,76 @@
+.tab-progress {
+	display: flex;
+	flex-direction: column;
+	
+	&__content{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__block {
+		position: relative;
+		width: 32.6%;
+		height: 18vw;
+		margin-top: 20px;
+		margin-right: 1%;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+
+		@include breakpoint(max-width 1200px) {
+			width: 49%;
+			height: 30vw;
+			margin-top: 20px;
+
+			&:nth-child(3n) {
+				margin-right: 1%;
+			}
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+
+		@include breakpoint(max-width 768px) {
+			width: 100%;
+			margin-right: 0;
+			height: 50vw;
+		}
+
+		&-desc {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 10px;
+			font-size: 12px;
+			color: white;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		&-title {
+			margin: 0;
+			margin-top: 5px;
+		}
+	}
+
+	&__content-link {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__content-img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__content-caption {
+		margin-top: 8px;
+		margin-bottom: 0;
+		text-align: center;
+	}
+}

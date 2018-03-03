@@ -182,3 +182,65 @@ $gold: #b89855;
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.tabcontent {
+  display: none;
+  padding: 0 40px;
+
+  @include breakpoint(max-width 768px) {
+    padding: 0 15px;
+  }
+}
+
+.activeTab {
+  color: #fff !important;
+  background-color: #b89855 !important;
+  transform: scale(1.05);
+}
+
+.nav-local {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.nav-local__btn {
+  padding: 10px 15px;
+  text-align: center;
+  color: $gold;
+  background-color: transparent;
+  border: 1px solid $gold;
+  border-right: none;
+  transition: all 0.2s;
+
+  &:last-child {
+    border-right: 1px solid $gold;
+  }
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+      background-color: #b89855;
+      transform: scale(1.05);
+      transition: all 0.2s;
+  }
+}
+
+.stock__modal {
+  display: none;
+
+  &-wrap {
+    display: flex;
+    
+    @include breakpoint(max-width 576px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-img {
+    display: block;
+    min-width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+}

@@ -96,6 +96,10 @@
     height: 4px;
     margin: 0 2px;
     background-color: #ffffff;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
   .active{
     background-color: #edb132;

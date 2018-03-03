@@ -1,17 +1,17 @@
 <section class="full-desc">
 
 	<ul class="full-desc__navigation">
-		<li><a href="#">Описание</a></li>
-		<li><a href="#">Выбор квартиры</a></li>
-		<li><a href="#">Стиль отделки</a></li>
-		<li><a href="#">Галерея</a></li>
-		<li><a href="#">Акции</a></li>
-		<li><a href="#">Ход строительства</a></li>
-		<li><a href="#">Банки партнёры</a></li>
-		<li><a href="#">Ипотечный калькулятор</a></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-describe')" id="default">Описание</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-apartment')">Выбор квартиры</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-style')">Стиль отделки</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-gallery')">Галерея</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-stock')">Акции</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-progress')">Ход строительства</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-partners')">Банки партнёры</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-calc')">Ипотечный калькулятор</button></li>
 	</ul>
 
-	<div class="full-desc__content">
+	<div class="full-desc__content tabcontent" id="tab-describe">
 		<div class="content">
 			<p class="content__text"><i class="fas fa-map-marker-alt"></i> Полный адрес: Одинцово, ул. Мякининская, мкр. Пашинский, д.2</p>
 			<h2 class="content__title">Школы, магазины, спортивный центр</h2>
@@ -49,4 +49,8 @@
 			</div>
 		</div>
 	</div>
+	<!-- @@include /tab-partners.html -->
+	<!-- @@include /tab-style.html -->
+	<!-- @@include /tab-progress.html -->
+	<!-- @@include /tab-stock.html -->
 </section>

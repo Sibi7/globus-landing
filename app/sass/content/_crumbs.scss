@@ -7,9 +7,17 @@
   &__link{
     display: flex;
     padding: 0;
-    margin: 20px 0 0 40px;
+    margin: 20px 0 0 50px;
     list-style: none;
     flex-wrap: wrap;
+
+    @include breakpoint(max-width 1024px) {
+      margin-top: 15px;
+    }
+
+    @include breakpoint(max-width 500px) {
+      margin-top: 5px;
+    }
     li{
       a{
         color: #b89855;

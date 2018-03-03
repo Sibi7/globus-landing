@@ -192,3 +192,26 @@ $(".slider_area")
         suffix: " м<sup>2</sup>"
     })
     .draggable();
+
+// tabs
+
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "flex";
+    evt.currentTarget.className += " activeTab";
+
+    if(tabName === 'tab-partners') {
+        document.getElementById(tabName).querySelector('.tabcontent').style.display = "flex"
+    }
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("default").click();

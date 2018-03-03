@@ -1,0 +1,60 @@
+.tab-stock {
+	flex-direction: column;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__block {
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+		margin-top: 20px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:hover {
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+		}
+
+		@include breakpoint(max-width 576px) {
+			flex-wrap: wrap;
+			padding: 10px;
+		}
+	}
+
+	&__link {
+		display: block;
+		min-width: 200px;
+		height: 200px;
+		margin-right: 20px;
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__desc {
+		margin-top: 10px;
+	}
+
+	&__desc-title {
+		margin: 0;
+	}
+
+	&__desc-text {
+		margin: 0;
+		margin-top: 10px;
+		color: black;
+
+		@include breakpoint(max-width 576px) {
+			display: block;
+			width: 100%;
+		}
+	}
+}
