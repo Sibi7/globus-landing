@@ -78,7 +78,8 @@
     float: left;
     width: 48%;
     @include breakpoint(max-width 770px){
-      width: 99%;
+      width: 88%;
+      margin: 0 auto;
     }
   }
   &__range-slide_area {

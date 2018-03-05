@@ -12,22 +12,24 @@
     font-family: $latoRegular;
     font-size: 12px;
     border-bottom: 1px solid #b89855;
-    a {
-      display: block;
-      padding: 10px;
-      color: #b89855;
-      text-transform: uppercase;
-      transition: .3s;
-      &:hover {
-        color: #fff;
-        background-color: #b89855;
-      }
+  }
+
+  &__btn {
+    display: block;
+    padding: 10px;
+    color: #b89855;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    transition: .2s;
+
+    &:hover {
+      color: #fff;
+      background-color: #b89855;
     }
   }
 
   &__content {
-    padding: 0 40px;
-    display: flex;
     @include breakpoint(max-width 768px){
       flex-direction: column;
       padding: 0 15px;
@@ -58,8 +60,7 @@
     }
 
     .aside-content {
-      min-width: 300px;
-      flex-basis: 30%;
+      flex-basis: 400px;
 
       &__pros {
         p {
@@ -106,6 +107,7 @@
       }
       &__form {
         width: calc(100% - 110px);
+
         @include breakpoint(max-width 450px) {
           width: 100%;
         }
@@ -125,13 +127,15 @@
         &-input {
           display: flex;
           height: 40px;
-          border: 1px solid $gold;
         }
         &-tel {
           height: 100%;
-          width: 100%;
+          width: calc(100% - 90px);
           border: none;
           padding: 0 10px;
+          border: 1px solid $gold;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
         }
         &-btn {
           width: 110px;
@@ -144,7 +148,9 @@
           font-size: 12px;
           color: #fff;
           background-color: $gold;
-          border: none;
+          border: 1px solid $gold;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
           flex-shrink: 0;
           cursor: pointer;
         }

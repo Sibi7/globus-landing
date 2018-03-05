@@ -3,18 +3,27 @@
 	text-align: center;
 	text-transform: uppercase;
 }
-
+.transformX-0 {
+	@include breakpoint(max-width 1024px) {
+		transform: translateX(0)!important;
+	}
+}
+.nopadding {
+	@include breakpoint(max-width 1024px) {
+		padding: 0 !important;
+	}
+}
 .head__slider--description  .inside-slide__title {
 	margin-bottom: 0;
 	padding: 20px 40px;
 	font-family: 'Lato', sans-serif;
-	font-weight: 800;
+	font-weight: 700;
 	font-style: normal;
 	font-size: 36px;
 	color: #ffe9ba;
 	background-color: #0e112f;
 	@include breakpoint(max-width 600px) {
-		font-size: 24px;
+		font-size: 14px;
 	}
 }
 
