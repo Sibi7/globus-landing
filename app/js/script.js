@@ -33,8 +33,14 @@ $(document).ready(function () {
             320: {
                 items: 3
             },
-            1000: {
+            770: {
                 items: 4
+            },
+            1455: {
+                items: 5
+            },
+            1650: {
+                items: 6
             }
         }
     });
