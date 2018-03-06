@@ -18,6 +18,11 @@
       .build__img {
         background-size: 110%;
         transition: 500ms ease;
+        &-bg {
+            img {
+              transform: scale(1.2);
+            }
+        }
       }
       .build__title:after {
         width: 100%;
@@ -34,11 +39,28 @@
     background-size: 100%;
     text-align: right;
     transition: 500ms ease;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: block;
+      z-index: 0;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .3s;
+      }
+    }
     @include breakpoint(max-width 1320px){
       background-size: cover;
     }
   }
   &__btn-sale {
+    position: relative;
     display: inline-block;
     text-align: center;
     padding: 8px 12px;
@@ -48,12 +70,14 @@
     font-size: 13px;
     font-family: $latoBold;
     transition: 200ms ease;
+    z-index: 1;
     &:hover {
       background: darken(#f23c3c, 10%);
       transition: 200ms ease;
     }
   }
   &__start-sales {
+    position: relative;
     display: inline-block;
     text-align: center;
     padding: 8px 12px;
@@ -63,6 +87,7 @@
     font-size: 13px;
     font-family: $latoBold;
     transition: 200ms ease;
+    z-index: 1;
     &:hover {
       background: lighten(#030621, 10%);
       transition: 200ms ease;

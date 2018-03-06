@@ -103,6 +103,9 @@
     position: absolute;
     top: 30%;
     width: 100%;
+    @include breakpoint(max-width 770px) {
+      top: 15%;
+    }
   }
   .owl-prev {
     position: absolute;
