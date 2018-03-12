@@ -206,6 +206,7 @@ function openTab(evt, tabName) {
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
+        tabcontent[i].classList.remove('visible-content');
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
@@ -213,6 +214,7 @@ function openTab(evt, tabName) {
     }
     var tab = document.getElementById(tabName);
     tab.style.display = "flex";
+    tab.classList.add('visible-content');
     evt.currentTarget.className += " activeTab";
 
     if(tab.querySelector('.tabcontent-1')) {
@@ -222,6 +224,15 @@ function openTab(evt, tabName) {
         tab.querySelector('.tabcontentStyle').style.display = "flex";
         tab.querySelector('.tab-style__nav-btn').classList.add('activeStyleTab');
     }
+
+    var maybe = document.querySelector('.interesting');
+
+    if (tab.classList.contains('tab-style') || tab.classList.contains('tab-gallery') || tab.classList.contains('tab-stock') || tab.classList.contains('tab-progress') || tab.classList.contains('tab-partners') || tab.classList.contains('tab-calc')) {
+        maybe.style.display = "none"
+    } else {
+        maybe.style.display = "block"
+    }
+
 }
 
 function openTabInside(evt, tabName) {
