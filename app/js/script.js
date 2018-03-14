@@ -89,8 +89,7 @@ $(document).ready(function () {
     });
 
     $( ".map__btn" ).click(function() {
-        $( ".map__wrap" ).slideToggle( "slow", function() {
-        });
+        $( ".map__wrap" ).slideToggle(0);
         $('.map__btn').toggleClass('active');
     });
 
@@ -268,4 +267,6 @@ function styleNav(evt, tabName) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("default").click();
+if(document.getElementById("default")) {
+    document.getElementById("default").click();
+}
