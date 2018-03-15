@@ -3,6 +3,9 @@
   position: relative;
   float: left;
   width: 100%;
+  .owl-nav {
+    display: none;
+  }
   &__slider {
     position: relative;
     width: 100%;
@@ -13,6 +16,8 @@
     @include breakpoint(max-width 1024px){
       height: 400px;
     }
+
+
     &:before {
       content: '';
       position: absolute;

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $('.owl-carousel-header').owlCarousel({
         loop: true,
         margin: 0,
@@ -19,7 +18,8 @@ $(document).ready(function () {
             }
         }
     });
-    $('.partners__wrap').owlCarousel({
+
+    $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 0,
         autoplay: true,
@@ -44,6 +44,7 @@ $(document).ready(function () {
             }
         }
     });
+
     $('.property-selection__numbers').click(function () {
         $(this).toggleClass('active')
     });
@@ -91,6 +92,17 @@ $(document).ready(function () {
     $( ".map__btn" ).click(function() {
         $( ".map__wrap" ).slideToggle(0);
         $('.map__btn').toggleClass('active');
+
+        map.customGeoCoder('г. Москва', [], function (coor) {
+            map.init({
+                mapId: 'yaMap',
+                height: '365px',
+                zoom: 11,
+                center: coor,
+                controls: ['default', 'routeButtonControl']
+            });
+            console.log(coor);
+        });
     });
 
     $('.aside-content__form-tel').inputmask({ alias: "phoneru"});

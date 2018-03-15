@@ -32,7 +32,7 @@
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(3, 6, 33, .6);
+      background: rgba(3, 6, 33, 0.6);
       transition: 200ms ease;
     }
     &:hover {
@@ -43,7 +43,6 @@
         background: rgba(3, 6, 33, .4);
         transition: 200ms ease;
       }
-      background-size: 110%;
       transition: 500ms ease;
       @include breakpoint(max-width 992px){
         background-size: cover;
@@ -112,7 +111,7 @@
     }
     .btn-white{
       transform: translate(-50%, -50%);
-      top: 50%;
+      bottom: 0;
       @include breakpoint(max-width 770px){
         top: 70%;
         font-size: 10px;
@@ -124,7 +123,6 @@
       .housing__title:after {
         width: 100%;
       }
-      background-size: 110%;
       transition: 500ms ease;
       &:before{
         background: rgba(3,6,33, .4);
@@ -140,7 +138,7 @@
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(3, 6, 33, .6);
+      background: rgba(3, 6, 33, 0.4);
     }
   }
   &__item-x-small{
@@ -159,7 +157,7 @@
     }
     .btn-white{
       transform: translate(-50%, -50%);
-      top: 50%;
+      bottom: 0;
       @include breakpoint(max-width 770px){
         top: 70%;
         font-size: 10px;
@@ -171,7 +169,6 @@
       .housing__title:after {
         width: 100%;
       }
-      background-size: 110%;
       transition: 500ms ease;
       &:before{
         background: rgba(3,6,33, .4);
@@ -187,7 +184,7 @@
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(3, 6, 33, .6);
+      background: rgba(3, 6, 33, 0.4);
       transition: 200ms ease;
     }
   }

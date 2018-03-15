@@ -28,7 +28,7 @@ $(document).on('click', '.build__btn', function() {
                     draggable: true
                 }
             }
-        ]
+            ]
         });
         console.log(coor);
     });
