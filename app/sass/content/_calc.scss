@@ -1,0 +1,59 @@
+.calc {
+	height: 120vh;
+
+	&__header {
+		margin: 0 auto;
+	}
+
+	&__row {
+		display: flex;
+		margin-top: 50px;
+	}
+
+	&__field {
+		width: 49%;
+		margin-right: 2%;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		padding: 10px;
+		border: 2px solid #b89855;
+		border-radius: 5px;
+	}
+
+	&__time,
+	&__rate {
+		width: 100%;
+	}
+
+	.ui-slider-range {
+		background: #999;
+	}
+
+	.ui-slider {
+		background: black;
+	}
+
+	.ui-slider .ui-slider-handle {
+		transform: translateX(0);
+	}
+
+	.ui-slider-float .ui-slider-tip, .ui-slider-float .ui-slider-tip-label {
+		left: 50%;
+		width: 45px;
+		margin-left: -1.5px;
+		transform: translateX(-50%);
+		text-align: center;
+	}
+}
+
+.slider_time,
+.slider_rate {
+	width: 90%;
+	margin: 0 auto;
+}
