@@ -137,14 +137,14 @@
 <section class="full-desc">
 
 	<ul class="full-desc__navigation">
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-describe')" id="default">Описание</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-describe')">Описание</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-apartment')">Выбор квартиры</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-style')">Стиль отделки</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-gallery')">Галерея</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-stock')">Акции</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-progress')">Ход строительства</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-partners')">Банки партнёры</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-calc')">Ипотечный калькулятор</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-calc')" id="default">Ипотечный калькулятор</button></li>
 	</ul>
 
 	<div class="full-desc__content tabcontent" id="tab-describe">
@@ -1242,7 +1242,48 @@
 </div>
 <!-- end tab-stock.html-->
 
-	<div class="tab-calc" id="tab-calc"></div>
+<!-- start tab-calc.html-->
+<div class="calc tabcontent" id="tab-calc">
+	<header class="calc__header"><img src="img/calc-bg.jpg" alt=""></header>
+	<div class="calc__row">
+		<div class="calc__time">
+			<h3 class="calc__title">Срок кредита, лет</h3>
+			<div class="slider_time"></div>
+		</div>
+	</div>
+
+	<div class="calc__row calc__row_after-slider">
+		<div class="calc__field">
+			<h3 class="calc__title">Стоимость недвижимости, руб.</h3>
+			<input class="calc__input" id="cost" min="0" type="number" placeholder="Введите сумму *">
+		</div>
+
+		<div class="calc__field">
+			<h3 class="calc__title">Первоначальный взнос, руб</h3>
+			<input class="calc__input" id="first-payment" min="0" type="number" placeholder="Введите сумму *">
+		</div>
+	</div>
+
+	<div class="calc__row">
+		<div class="calc__rate">
+			<h3 class="calc__title">Процентная ставка, % годовых</h3>
+			<div class="slider_rate"></div>
+		</div>
+	</div>
+
+	<div class="calc__row calc__row_after-slider">
+		<h3 class="calc__title">Сумма кредита</h3>
+		<p class="calc__cost calc__final-credit">0 руб.</p>
+	</div>
+
+	<div class="calc__row">
+		<h3 class="calc__title">Ежемесячный платёж</h3>
+		<p class="calc__cost calc__month-payment">0 руб.</p>
+	</div>
+
+	<button class="calc__btn">Посчитать</button>
+</div>
+<!-- end tab-calc.html-->
 </section>
 <!-- end inside-full-desc.html-->
 <!-- start inside-interesting.html-->

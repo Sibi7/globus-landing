@@ -315,18 +315,12 @@ $(".slider_rate")
         rest: "label"
     });
 
-// current year
-var currentYear = parseInt(document.querySelector('.slider_time .ui-slider-tip').innerHTML, 10);
-
-// current rate
-var currentRate = parseInt(document.querySelector('.slider_rate .ui-slider-tip').innerHTML, 10);
-
 var realtyCost = document.getElementById('cost');
 var firstPayment = document.getElementById('first-payment');
 var amountOfCredit = document.querySelector('.calc__final-credit');
 var monthPayment = document.querySelector('.calc__month-payment');
 
-var realtyCostNumber = 0, firstPaymentNumber = 0;
+var realtyCostNumber = 0, firstPaymentNumber = 0, currentRate, currentYear;
 
 realtyCost.oninput = function () {
     if (realtyCostNumber >= 0) {
@@ -349,15 +343,23 @@ firstPayment.oninput = function () {
     return firstPaymentNumber;
 }
 
+function getCurrentSliderNumbers() {
+    currentYear = parseInt(document.querySelector('.slider_time .ui-slider-tip').innerHTML, 10);
+    currentRate = parseInt(document.querySelector('.slider_rate .ui-slider-tip').innerHTML, 10);
+    return currentRate, currentYear;
+}
+
 function calcCredit() {
-    amountOfCredit.innerHTML = (realtyCostNumber - firstPaymentNumber);
+    getCurrentSliderNumbers();
+    amountOfCredit.innerHTML = (realtyCostNumber - firstPaymentNumber + ' руб.');
 }
 
 function calcMonthPayment() {
+    getCurrentSliderNumbers();
     var first = (realtyCostNumber - firstPaymentNumber) / (currentYear * 12);
     var second = (realtyCostNumber - firstPaymentNumber) * (currentRate * 0.001)
 
-    monthPayment.innerHTML = (Math.round((first + second) * 100) / 100);
+    monthPayment.innerHTML = (Math.round((first + second) * 100) / 100 + ' руб.');
 }
 
 
