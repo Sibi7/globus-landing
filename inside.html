@@ -137,14 +137,14 @@
 <section class="full-desc">
 
 	<ul class="full-desc__navigation">
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-describe')" id="default">Описание</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-describe')">Описание</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-apartment')">Выбор квартиры</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-style')">Стиль отделки</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-gallery')">Галерея</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-stock')">Акции</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-progress')">Ход строительства</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-partners')">Банки партнёры</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-calc')">Ипотечный калькулятор</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-calc')" id="default">Ипотечный калькулятор</button></li>
 	</ul>
 
 	<div class="full-desc__content tabcontent" id="tab-describe">
@@ -1281,7 +1281,32 @@
 		<p class="calc__cost calc__month-payment">0 руб.</p>
 	</div>
 
-	<button class="calc__btn">Посчитать</button>
+	<button class="calc__btn" type="button">Посчитать</button>
+
+	<button class="calc__btn js_open-modal" type="button">Заявка на ипотеку</button>
+</div>
+
+<div class="modal">
+	<div class="modal__overlay js_close-modal"></div>
+	<div class="modal__content">
+		<button class="modal__close js_close-modal" type="button">X</button>
+		<h3 class="modal__title">Оставьте свою заявку!</h3>
+		<form class="modal__form" id="modal__form">
+			<div class="modal__form-row">
+				<label class="modal__form-label" for="name">Ваше имя</label>
+				<input class="modal__form-input" type="text" placeholder="Ваше имя">
+			</div>
+
+			<div class="modal__form-row">
+				<label class="modal__form-label" for="tel">Ваш телефон</label>
+				<input class="modal__form-input js_modal-mask" type="text" placeholder="Ваш телефон">
+			</div>
+
+			<div class="modal__form-row">
+				<input class="calc__btn" type="submit" value="Отправить">
+			</div>
+		</form>
+	</div>
 </div>
 <!-- end tab-calc.html-->
 </section>

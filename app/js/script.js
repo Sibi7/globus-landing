@@ -105,7 +105,7 @@ $(document).ready(function () {
         });
     });
 
-    $('.aside-content__form-tel').inputmask({ alias: "phoneru"});
+    $('.aside-content__form-telm, .js_modal-mask').inputmask({ alias: "phoneru"});
 
     $(window).resize(function () {
         if ($(window).width() < 770) {
@@ -315,6 +315,38 @@ $(".slider_rate")
         rest: "label"
     });
 
+if($(window).width() < 576) {
+    $(".slider_time")
+    .slider({
+        max: 25,
+        min: 1,
+        range: "min",
+        step: 0.5
+    })
+    .slider('pips', {
+        rest: "label",
+        step: 10
+    })
+    .slider('float', {
+        rest: "label"
+    });
+
+$(".slider_rate")
+    .slider({
+        max: 25,
+        min: 1,
+        range: "min",
+        step: 0.1
+    })
+    .slider('pips', {
+        rest: "label",
+        step: 50
+    })
+    .slider('float', {
+        rest: "label"
+    });
+}
+
 var realtyCost = document.getElementById('cost');
 var firstPayment = document.getElementById('first-payment');
 var amountOfCredit = document.querySelector('.calc__final-credit');
@@ -341,18 +373,18 @@ firstPayment.oninput = function () {
         firstPaymentNumber = 0;
     }
     return firstPaymentNumber;
-}
+};
 
 function getCurrentSliderNumbers() {
     currentYear = parseInt(document.querySelector('.slider_time .ui-slider-tip').innerHTML, 10);
     currentRate = parseInt(document.querySelector('.slider_rate .ui-slider-tip').innerHTML, 10);
     return currentRate, currentYear;
-}
+};
 
 function calcCredit() {
     getCurrentSliderNumbers();
     amountOfCredit.innerHTML = (realtyCostNumber - firstPaymentNumber + ' руб.');
-}
+};
 
 function calcMonthPayment() {
     getCurrentSliderNumbers();
@@ -360,10 +392,18 @@ function calcMonthPayment() {
     var second = (realtyCostNumber - firstPaymentNumber) * (currentRate * 0.001)
 
     monthPayment.innerHTML = (Math.round((first + second) * 100) / 100 + ' руб.');
-}
+};
 
 
 $(document).on('click', '.calc__btn', function() {
     calcCredit();
     calcMonthPayment();
-})
+});
+
+$(document).on('click', '.js_open-modal', function() {
+    $('.modal').fadeIn('fast');
+});
+
+$(document).on('click', '.js_close-modal', function() {
+    $('.modal').fadeOut('fast');
+});

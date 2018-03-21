@@ -5,7 +5,7 @@
   width: 270px;
   height: 100%;
   padding: 40px;
-  z-index: 9999;
+  z-index: 1;
   background-color: #030621;
   @include breakpoint(max-width 1024px){
     left: -270px;
