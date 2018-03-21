@@ -60,28 +60,28 @@ $(document).ready(function () {
     $(window).scroll(function () {
         $('.progress__wrap').each(function () {
             var
-                cPos = $(this).offset().top,
-                topWindow = $(window).scrollTop();
+            cPos = $(this).offset().top,
+            topWindow = $(window).scrollTop();
 
             if (cPos < topWindow + 300) {
                 if (cc < 2) {
                     $('.number').addClass('viz');
                     $('div').each(function () {
                         var
-                            i = 1,
-                            num = $(this).data('num'),
-                            step = 100 * time / num,
-                            that = $(this),
-                            int = setInterval(function () {
-                                if (i <= num) {
-                                    that.html(i);
-                                }
-                                else {
-                                    cc = cc + 2;
-                                    clearInterval(int);
-                                }
-                                i++;
-                            }, step);
+                        i = 1,
+                        num = $(this).data('num'),
+                        step = 100 * time / num,
+                        that = $(this),
+                        int = setInterval(function () {
+                            if (i <= num) {
+                                that.html(i);
+                            }
+                            else {
+                                cc = cc + 2;
+                                clearInterval(int);
+                            }
+                            i++;
+                        }, step);
                     });
                 }
 
@@ -176,39 +176,39 @@ function closeAllSelect(elmnt) {
 document.addEventListener("click", closeAllSelect);
 
 $(".slider")
-    .slider({ 
-        min: 0,
-        max: 10,
-        range: true,
-        values: [0, 10],
-        step: 0.1
-    })
-    .slider("pips", {
-        rest: false,
-        suffix: " млн."
-    })
-    .slider("float", {
-        rest: "label",
-        suffix: " млн."
-    })
-    .draggable();
+.slider({ 
+    min: 0,
+    max: 10,
+    range: true,
+    values: [0, 10],
+    step: 0.1
+})
+.slider("pips", {
+    rest: false,
+    suffix: " млн."
+})
+.slider("float", {
+    rest: "label",
+    suffix: " млн."
+})
+.draggable();
 
 $(".slider_area")
-    .slider({ 
-        min: 0,
-        max: 120,
-        range: true,
-        values: [0, 120],
-        step: 1
-    })
-    .slider("pips", {
-        rest: false,
-        suffix: " м<sup>2</sup>"
-    })
-    .slider("float", {
-        suffix: " м<sup>2</sup>"
-    })
-    .draggable();
+.slider({ 
+    min: 0,
+    max: 120,
+    range: true,
+    values: [0, 120],
+    step: 1
+})
+.slider("pips", {
+    rest: false,
+    suffix: " м<sup>2</sup>"
+})
+.slider("float", {
+    suffix: " м<sup>2</sup>"
+})
+.draggable();
 
 // tabs
 
@@ -248,33 +248,33 @@ function openTab(evt, tabName) {
 
 function openTabInside(evt, tabName) {
     var tabcontentInside = document.getElementsByClassName("tabcontent-1");
-        for (i = 0; i < tabcontentInside.length; i++) {
-            tabcontentInside[i].style.display = "none";
-        }
-        var tablinksInside = document.getElementsByClassName("tablinks-1");
-        for (i = 0; i < tablinksInside.length; i++) {
-            tablinksInside[i].className = tablinksInside[i].className.replace(" activeInsideTab", "");
-        }
-        var tabInside = document.getElementById(tabName);
-        tabInside.style.display = "flex";
-        evt.currentTarget.className += " activeInsideTab";
+    for (i = 0; i < tabcontentInside.length; i++) {
+        tabcontentInside[i].style.display = "none";
+    }
+    var tablinksInside = document.getElementsByClassName("tablinks-1");
+    for (i = 0; i < tablinksInside.length; i++) {
+        tablinksInside[i].className = tablinksInside[i].className.replace(" activeInsideTab", "");
+    }
+    var tabInside = document.getElementById(tabName);
+    tabInside.style.display = "flex";
+    evt.currentTarget.className += " activeInsideTab";
 }
 
 function styleNav(evt, tabName) {
     var tabcontentStyle = document.getElementsByClassName("tabcontentStyle");
-        for (i = 0; i < tabcontentStyle.length; i++) {
-            tabcontentStyle[i].style.display = "none";
-        }
-        var tablinksStyle = document.getElementsByClassName("tab-style__nav-btn");
-        for (i = 0; i < tablinksStyle.length; i++) {
-            tablinksStyle[i].className = tablinksStyle[i].className.replace(" activeStyleTab", "");
-        }
-        var tabStyle = document.getElementById(tabName);
-        tabStyle.style.display = "flex";
-        evt.currentTarget.className += " activeStyleTab";
+    for (i = 0; i < tabcontentStyle.length; i++) {
+        tabcontentStyle[i].style.display = "none";
+    }
+    var tablinksStyle = document.getElementsByClassName("tab-style__nav-btn");
+    for (i = 0; i < tablinksStyle.length; i++) {
+        tablinksStyle[i].className = tablinksStyle[i].className.replace(" activeStyleTab", "");
+    }
+    var tabStyle = document.getElementById(tabName);
+    tabStyle.style.display = "flex";
+    evt.currentTarget.className += " activeStyleTab";
 
-        tabStyle.querySelector('.tabcontent-1').style.display = "flex";
-        tabStyle.querySelector('.tablinks-1').classList.add('activeInsideTab');
+    tabStyle.querySelector('.tabcontent-1').style.display = "flex";
+    tabStyle.querySelector('.tablinks-1').classList.add('activeInsideTab');
 
 }
 
@@ -284,8 +284,9 @@ if(document.getElementById("default")) {
 }
 
 // calculator
+if(realtyCost) {
 
-$(".slider_time")
+    $(".slider_time")
     .slider({
         max: 25,
         min: 1,
@@ -300,7 +301,7 @@ $(".slider_time")
         rest: "label"
     });
 
-$(".slider_rate")
+    $(".slider_rate")
     .slider({
         max: 25,
         min: 1,
@@ -315,90 +316,91 @@ $(".slider_rate")
         rest: "label"
     });
 
-if($(window).width() < 576) {
-    $(".slider_time")
-    .slider({
-        max: 25,
-        min: 1,
-        range: "min",
-        step: 0.5
-    })
-    .slider('pips', {
-        rest: "label",
-        step: 10
-    })
-    .slider('float', {
-        rest: "label"
-    });
+    if($(window).width() < 576) {
+        $(".slider_time")
+        .slider({
+            max: 25,
+            min: 1,
+            range: "min",
+            step: 0.5
+        })
+        .slider('pips', {
+            rest: "label",
+            step: 10
+        })
+        .slider('float', {
+            rest: "label"
+        });
 
-$(".slider_rate")
-    .slider({
-        max: 25,
-        min: 1,
-        range: "min",
-        step: 0.1
-    })
-    .slider('pips', {
-        rest: "label",
-        step: 50
-    })
-    .slider('float', {
-        rest: "label"
+        $(".slider_rate")
+        .slider({
+            max: 25,
+            min: 1,
+            range: "min",
+            step: 0.1
+        })
+        .slider('pips', {
+            rest: "label",
+            step: 50
+        })
+        .slider('float', {
+            rest: "label"
+        });
+    }
+
+    var realtyCost = document.getElementById('cost');
+    var firstPayment = document.getElementById('first-payment');
+    var amountOfCredit = document.querySelector('.calc__final-credit');
+    var monthPayment = document.querySelector('.calc__month-payment');
+
+    var realtyCostNumber = 0, firstPaymentNumber = 0, currentRate, currentYear;
+
+    realtyCost.oninput = function () {
+        if (realtyCostNumber >= 0) {
+            realtyCostNumber = parseInt(realtyCost.value, 10);
+            console.log(realtyCost.value)
+        }
+        else {
+            realtyCostNumber = 0;
+        }
+        return realtyCostNumber;
+    }
+
+    firstPayment.oninput = function () {
+        if (firstPaymentNumber >= 0) {
+            firstPaymentNumber = parseInt(firstPayment.value, 10)
+        }
+        else {
+            firstPaymentNumber = 0;
+        }
+        return firstPaymentNumber;
+    };
+
+    function getCurrentSliderNumbers() {
+        currentYear = parseInt(document.querySelector('.slider_time .ui-slider-tip').innerHTML, 10);
+        currentRate = parseInt(document.querySelector('.slider_rate .ui-slider-tip').innerHTML, 10);
+        return currentRate, currentYear;
+    };
+
+    function calcCredit() {
+        getCurrentSliderNumbers();
+        amountOfCredit.innerHTML = (realtyCostNumber - firstPaymentNumber + ' руб.');
+    };
+
+    function calcMonthPayment() {
+        getCurrentSliderNumbers();
+        var first = (realtyCostNumber - firstPaymentNumber) / (currentYear * 12);
+        var second = (realtyCostNumber - firstPaymentNumber) * (currentRate * 0.001)
+
+        monthPayment.innerHTML = (Math.round((first + second) * 100) / 100 + ' руб.');
+    };
+
+
+    $(document).on('click', '.calc__btn', function() {
+        calcCredit();
+        calcMonthPayment();
     });
 }
-
-var realtyCost = document.getElementById('cost');
-var firstPayment = document.getElementById('first-payment');
-var amountOfCredit = document.querySelector('.calc__final-credit');
-var monthPayment = document.querySelector('.calc__month-payment');
-
-var realtyCostNumber = 0, firstPaymentNumber = 0, currentRate, currentYear;
-
-realtyCost.oninput = function () {
-    if (realtyCostNumber >= 0) {
-        realtyCostNumber = parseInt(realtyCost.value, 10);
-        console.log(realtyCost.value)
-    }
-    else {
-        realtyCostNumber = 0;
-    }
-    return realtyCostNumber;
-}
-
-firstPayment.oninput = function () {
-    if (firstPaymentNumber >= 0) {
-        firstPaymentNumber = parseInt(firstPayment.value, 10)
-    }
-    else {
-        firstPaymentNumber = 0;
-    }
-    return firstPaymentNumber;
-};
-
-function getCurrentSliderNumbers() {
-    currentYear = parseInt(document.querySelector('.slider_time .ui-slider-tip').innerHTML, 10);
-    currentRate = parseInt(document.querySelector('.slider_rate .ui-slider-tip').innerHTML, 10);
-    return currentRate, currentYear;
-};
-
-function calcCredit() {
-    getCurrentSliderNumbers();
-    amountOfCredit.innerHTML = (realtyCostNumber - firstPaymentNumber + ' руб.');
-};
-
-function calcMonthPayment() {
-    getCurrentSliderNumbers();
-    var first = (realtyCostNumber - firstPaymentNumber) / (currentYear * 12);
-    var second = (realtyCostNumber - firstPaymentNumber) * (currentRate * 0.001)
-
-    monthPayment.innerHTML = (Math.round((first + second) * 100) / 100 + ' руб.');
-};
-
-
-$(document).on('click', '.calc__btn', function() {
-    calcCredit();
-    calcMonthPayment();
-});
 
 $(document).on('click', '.js_open-modal', function() {
     $('.modal').fadeIn('fast');
@@ -406,4 +408,30 @@ $(document).on('click', '.js_open-modal', function() {
 
 $(document).on('click', '.js_close-modal', function() {
     $('.modal').fadeOut('fast');
+});
+
+var city = document.getElementById('city');
+var outOfTown = document.getElementById('out-of-town');
+
+function openList(subject, subjectList, filterWrap) {
+    var list = subject.querySelector('.' + subjectList);
+    var wrap = subject.querySelector('.' + filterWrap);
+
+    list.classList.toggle('open_list');
+    wrap.classList.toggle('filter__select_opened');
+
+    if (list.style.maxHeight) {
+        list.style.maxHeight = null;
+    }
+    else {
+        list.style.maxHeight = list.scrollHeight + 30 + "px";
+    }
+}
+
+city.addEventListener('click', function() {
+    openList(city, 'filter__select_list', 'filter__select');
+});
+
+outOfTown.addEventListener('click', function() {
+    openList(outOfTown, 'filter__select_list', 'filter__select');
 });

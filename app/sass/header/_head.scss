@@ -1,9 +1,9 @@
 .header {
   position: relative;
-  /*float: left;*/
   width: 100%;
   border-bottom: 2px solid #b89855;
   clear: both;
+
   &__nav {
     display: flex;
     justify-content: center;
@@ -17,21 +17,31 @@
     }
     li {
       display: inline-block;
+    }
 
-      a {
-        color: #b89855;
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: uppercase;
+    &-link {
+      color: #b89855;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      transition: 200ms ease;
+      display: inline-block;
+      padding: 20px 25px;
+      background-color: transparent;
+      border: none;
+      &:hover {
         transition: 200ms ease;
-        display: inline-block;
-        padding: 20px 25px;
-        &:hover {
-          transition: 200ms ease;
-          background: #d1b374;
-          color: #fff;
-        }
+        background: #d1b374;
+        color: #fff;
       }
+    }
+
+    &-link_list {
+      width: 100%;
+      padding: 10px 0;
+      padding-left: 10px;
+      text-transform: none;
+      font-size: 16px;
     }
   }
 
