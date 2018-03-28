@@ -1,5 +1,6 @@
 .apartment {
 	flex-direction: column;
+	align-items: center;
 	overflow-x: auto;
 
 	.ui-slider-range {
@@ -22,6 +23,7 @@
 	&__sliders {
 		display: flex;
 		justify-content: space-between;
+		width: 100%;
 
 		@include breakpoint(max-width 992px) {
 			flex-wrap: wrap;
@@ -58,6 +60,7 @@
 }
 .apartment__table {
 	margin: 20px auto;
+	margin-top: 50px;
 	border-collapse: collapse;
 }
 .apartment__table-th,
