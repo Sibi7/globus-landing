@@ -1,17 +1,17 @@
-.choice {
+.apartment {
 	overflow-x: auto;
 }
-.choice__table {
+.apartment__table {
 	margin: 20px auto;
 	border-collapse: collapse;
 }
-.choice__table-th,
-.choice__table-td {
+.apartment__table-th,
+.apartment__table-td {
 	padding: 10px 15px;
 	border: 1px solid $gold;
 }
 
-.choice__table-th {
+.apartment__table-th {
 	cursor: pointer;
 	
 	&:after {
