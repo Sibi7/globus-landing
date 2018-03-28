@@ -58,6 +58,25 @@
 		}
 	}
 }
+.apartment__filter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 60px;
+
+	.property-selection__rooms {
+		margin-top: 0;
+		margin-right: 20px;
+	}
+}
+.calc__btn_apartment {
+	margin-top: 0;
+	@include breakpoint(max-width 604px) {
+		margin-top: 20px;	
+	}
+}
 .apartment__table {
 	margin: 20px auto;
 	margin-top: 50px;
@@ -67,26 +86,4 @@
 .apartment__table-td {
 	padding: 10px 15px;
 	border: 1px solid $gold;
-}
-
-.apartment__table-th {
-	cursor: pointer;
-	
-	&:after {
-		content: '\25B4 \25BE';
-	}
-}
-
-.headerSortDown {
-	padding-right: 29px;
-	&:after {
-		content: '\25BE';
-	}
-}
-
-.headerSortUp {
-	padding-right: 29px;
-	&:after {
-		content: '\25B4';
-	}
 }

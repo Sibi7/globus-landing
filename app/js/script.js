@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    $('#table').tablesorter()
-
     $('.owl-carousel-header').owlCarousel({
         loop: true,
         margin: 0,
