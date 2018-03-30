@@ -42,12 +42,12 @@
         <li><a href="contacts.html">Контакты</a></li>
     </ul>
     <div class="sidebar__socials">
-        <a href="#"><i class="fab fa-vk"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="http://vk.com/club120392020"><i class="fab fa-vk"></i></a>
+        <a href="https://www.facebook.com/GlobusEstateCo/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/globusestate/"><i class="fab fa-instagram"></i></a>
+        <a href="https://plus.google.com/116814065396263677215"><i class="fab fa-google-plus-g"></i></a>
+        <a href="https://www.youtube.com/channel/UC8Kz_aS1U36v-h_pjyNR0OQ"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com/Estate_Globus"><i class="fab fa-twitter"></i></a>
     </div>
 </aside>
 <!-- end main-sidebar.html-->
@@ -86,7 +86,20 @@
 				</ul>
 			</div>
 		</li>
-		<li><a class="header__nav-link" href="#">Скидки на новостройки</a></li>
+		<li>
+			<div class="filter__select_wrap" id="discounts">
+				<div  class="filter__select">
+					<span class="filter__select_active header__nav-link">Скидки на новостройки</span>
+				</div>
+
+				<ul class="filter__select_list">
+					<li><a class="header__nav-link header__nav-link_list" href="#">Коттеджные поселки</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Загородные дома</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Таунхаусы</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Участки</a></li>
+				</ul>
+			</div>
+		</li>
 	</ul>
 
 	<div class="menu btn5" data-menu="5">
@@ -201,7 +214,7 @@
 					<p class="aside-content__form-text">Оставьте свой номер и мы сразу вам перезвоним</p>
 
 					<form id="aside-content__form" class="aside-content__form-input">
-						<input type="tel" name="tel" class="aside-content__form-tel"><input value="ЖДУ ЗВОНКА" type="submit"  class="aside-content__form-btn">
+						<input type="tel" name="tel" class="aside-content__form-tel"><input value="ЖДУ ЗВОНКА" type="submit" id="back-call" class="aside-content__form-btn">
 					</form>
 				</div>
 
@@ -951,8 +964,6 @@
 </div>
 <!-- end tab-style.html-->
 
-	<div class="tab-gallery" id="tab-gallery"></div>
-
 <!-- start tab-progress.html-->
 <div class="tab-progress tabcontent" id="tab-progress">
 	<div class="tab-progress__content tabcontent-1" id="tab-progress-1">
@@ -1241,7 +1252,7 @@
 				</p>
 
 				<div class="stock__modal" id="stock3">
-					<div class="stock-modal-wrap">
+					<div class="stock__modal-wrap">
 						<img class="stock__modal-img" src="img/stock/03.jpg" alt="">
 						<p class="tab-stock__desc-text">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</p>
 					</div>
@@ -1259,7 +1270,7 @@
 				<h4 class="tab-stock__desc-title">19.01.2018 / Группа компаний "МИЦ" дарит скидки до 18%</h4>
 
 				<p class="tab-stock__desc-text">
-					<a class="tab-stock__desc-text" data-fancybox href="#stock5" href="javascript:;">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</a>
+					<a class="tab-stock__desc-text" data-fancybox data-src="#stock5" href="javascript:;">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</a>
 				</p>
 
 				<div class="stock__modal" id="stock4">
@@ -1348,7 +1359,7 @@
 				<h4 class="tab-stock__desc-title">20.01.2018 / Группа компаний "МИЦ" дарит скидки до 18%</h4>
 
 				<p class="tab-stock__desc-text">
-					<a class="tab-stock__desc-text" data-fancybox href="#stock5" href="javascript:;">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</a>
+					<a class="tab-stock__desc-text" data-fancybox data-src="#stock5" href="javascript:;">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</a>
 				</p>
 
 				<div class="stock__modal" id="stock4">
@@ -1437,6 +1448,14 @@
 </div>
 <!-- end tab-calc.html-->
 </section>
+
+<div class="modal modal__back-call">
+	<div class="modal__overlay js_close-modal"></div>
+	<div class="modal__content modal__content_back-call">
+		<button class="modal__close js_close-modal" type="button">X</button>
+		<h2>Наш менеджер свяжется с вами в ближайшее время!</h2>
+	</div>
+</div>
 <!-- end inside-full-desc.html-->
 <!-- start inside-interesting.html-->
 <section class="interesting">
@@ -1592,7 +1611,6 @@
 <script src="js/jquery.ui.touch-punch.min.js"></script>
 <script src="js/jquery-ui-slider-pips.js"></script>
 <script src='js/owl.carousel.min.js'></script>
-<script src="js/jquery.tablesorter.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <script src="js/script.min.js"></script>
 <script src="js/ACMap.js"></script>

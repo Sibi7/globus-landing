@@ -39,7 +39,7 @@
 					<p class="aside-content__form-text">Оставьте свой номер и мы сразу вам перезвоним</p>
 
 					<form id="aside-content__form" class="aside-content__form-input">
-						<input type="tel" name="tel" class="aside-content__form-tel"><input value="ЖДУ ЗВОНКА" type="submit"  class="aside-content__form-btn">
+						<input type="tel" name="tel" class="aside-content__form-tel"><input value="ЖДУ ЗВОНКА" type="submit" id="back-call" class="aside-content__form-btn">
 					</form>
 				</div>
 
@@ -56,11 +56,17 @@
 
 	<!-- @@include /tab-style.html -->
 
-	<div class="tab-gallery" id="tab-gallery"></div>
-
 	<!-- @@include /tab-progress.html -->
 
 	<!-- @@include /tab-stock.html -->
 
 	<!-- @@include /tab-calc.html -->
 </section>
+
+<div class="modal modal__back-call">
+	<div class="modal__overlay js_close-modal"></div>
+	<div class="modal__content modal__content_back-call">
+		<button class="modal__close js_close-modal" type="button">X</button>
+		<h2>Наш менеджер свяжется с вами в ближайшее время!</h2>
+	</div>
+</div>

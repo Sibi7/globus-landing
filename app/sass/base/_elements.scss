@@ -275,6 +275,11 @@ $gold: #b89855;
     padding-top: 40px;
     background-color: white;
 
+    &_back-call {
+      height: 180px;
+      text-align: center;
+    }
+
     @include breakpoint(max-width 576px) {
       width: 90vw;
       padding: 15px;

@@ -83,7 +83,10 @@
     }
   }
   &__range-slide_area {
-    margin-top: 10px;
+    .title-range {
+      display: inline-block;
+      margin-top: 8px;
+    }
   }
 .title-range{
   margin-right: 10px;
@@ -407,7 +410,7 @@
 }
 
 .slider_area  {
-  margin-top: 22px;
+  margin-top: 26px;
 }
 
 .header-range {

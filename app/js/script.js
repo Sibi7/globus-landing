@@ -63,7 +63,7 @@ $(document).ready(function () {
             cPos = $(this).offset().top,
             topWindow = $(window).scrollTop();
 
-            if (cPos < topWindow + 300) {
+            if (cPos < topWindow + 700) {
                 if (cc < 2) {
                     $('.number').addClass('viz');
                     $('div').each(function () {
@@ -176,39 +176,39 @@ function closeAllSelect(elmnt) {
 document.addEventListener("click", closeAllSelect);
 
 $(".slider")
-    .slider({ 
-        min: 0,
-        max: 10,
-        range: true,
-        values: [0, 10],
-        step: 0.1
-    })
-    .slider("pips", {
-        rest: false,
-        suffix: " млн."
-    })
-    .slider("float", {
-        rest: "label",
-        suffix: " млн."
-    })
-    .draggable();
+.slider({ 
+    min: 0,
+    max: 10,
+    range: true,
+    values: [0, 10],
+    step: 0.1
+})
+.slider("pips", {
+    rest: false,
+    suffix: " млн."
+})
+.slider("float", {
+    rest: "label",
+    suffix: " млн."
+})
+.draggable();
 
 $(".slider_area")
-    .slider({ 
-        min: 0,
-        max: 120,
-        range: true,
-        values: [0, 120],
-        step: 1
-    })
-    .slider("pips", {
-        rest: false,
-        suffix: " м<sup>2</sup>"
-    })
-    .slider("float", {
-        suffix: " м<sup>2</sup>"
-    })
-    .draggable();
+.slider({ 
+    min: 0,
+    max: 120,
+    range: true,
+    values: [0, 120],
+    step: 1
+})
+.slider("pips", {
+    rest: false,
+    suffix: " м<sup>2</sup>"
+})
+.slider("float", {
+    suffix: " м<sup>2</sup>"
+})
+.draggable();
 
 // tabs
 
@@ -283,6 +283,37 @@ if(document.getElementById("default")) {
     document.getElementById("default").click();
 }
 $(".slider_time")
+.slider({
+    max: 25,
+    min: 1,
+    range: "min",
+    step: 0.5
+})
+.slider('pips', {
+    rest: "label",
+    step: 2.5
+})
+.slider('float', {
+    rest: "label"
+});
+
+$(".slider_rate")
+.slider({
+    max: 25,
+    min: 1,
+    range: "min",
+    step: 0.1
+})
+.slider('pips', {
+    rest: "label",
+    step: 15
+})
+.slider('float', {
+    rest: "label"
+});
+
+if($(window).width() < 576) {
+    $(".slider_time")
     .slider({
         max: 25,
         min: 1,
@@ -291,7 +322,7 @@ $(".slider_time")
     })
     .slider('pips', {
         rest: "label",
-        step: 2.5
+        step: 10
     })
     .slider('float', {
         rest: "label"
@@ -306,47 +337,16 @@ $(".slider_time")
     })
     .slider('pips', {
         rest: "label",
-        step: 15
+        step: 50
     })
     .slider('float', {
         rest: "label"
     });
-
-    if($(window).width() < 576) {
-        $(".slider_time")
-        .slider({
-            max: 25,
-            min: 1,
-            range: "min",
-            step: 0.5
-        })
-        .slider('pips', {
-            rest: "label",
-            step: 10
-        })
-        .slider('float', {
-            rest: "label"
-        });
-
-        $(".slider_rate")
-        .slider({
-            max: 25,
-            min: 1,
-            range: "min",
-            step: 0.1
-        })
-        .slider('pips', {
-            rest: "label",
-            step: 50
-        })
-        .slider('float', {
-            rest: "label"
-        });
-    }
+}
 // calculator
 if(realtyCost) {
 
-    
+
 
     var realtyCost = document.getElementById('cost');
     var firstPayment = document.getElementById('first-payment');
@@ -411,13 +411,20 @@ $(document).on('click', '.js_close-modal', function() {
 
 var city = document.getElementById('city');
 var outOfTown = document.getElementById('out-of-town');
+var discounts = document.getElementById('discounts');
 
-function openList(subject, subjectList, filterWrap) {
+function toggleList(subject, subjectList, filterWrap) {
     var list = subject.querySelector('.' + subjectList);
     var wrap = subject.querySelector('.' + filterWrap);
 
-    list.classList.toggle('open_list');
-    wrap.classList.toggle('filter__select_opened');
+    if(list.classList.contains('open_list')) {
+        list.classList.remove('open_list');
+        wrap.classList.remove('filter__select_opened');
+    }
+    else {
+        list.classList.add('open_list');
+        wrap.classList.add('filter__select_opened');
+    }
 
     if (list.style.maxHeight) {
         list.style.maxHeight = null;
@@ -427,70 +434,26 @@ function openList(subject, subjectList, filterWrap) {
     }
 }
 
-city.addEventListener('click', function() {
-    openList(city, 'filter__select_list', 'filter__select');
-});
+city.onmouseenter = function(event){
+    toggleList(city, 'filter__select_list', 'filter__select');
+};
 
-outOfTown.addEventListener('click', function() {
-    openList(outOfTown, 'filter__select_list', 'filter__select');
-});
+city.onmouseleave = function(event){
+    toggleList(city, 'filter__select_list', 'filter__select');
+};
 
+discounts.onmouseenter = function(event){
+    toggleList(discounts, 'filter__select_list', 'filter__select');
+};
 
+discounts.onmouseleave = function(event){
+    toggleList(discounts, 'filter__select_list', 'filter__select');
+};
 
-// // table sort 
-// function sortTable(n) {
-//   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-//   table = document.getElementById("table");
+outOfTown.onmouseenter = function(event){
+    toggleList(outOfTown, 'filter__select_list', 'filter__select');
+};
 
-//   switching = true;
-//   // Set the sorting direction to ascending:
-//   dir = "asc";
-//   /* Make a loop that will continue until
-//   no switching has been done: */
-//   while (switching) {
-//     // Start by saying: no switching is done:
-//     switching = false;
-//     rows = table.getElementsByTagName("TR");
-//     /* Loop through all table rows (except the
-//     first, which contains table headers): */
-//     for (i = 1; i < (rows.length - 1); i++) {
-//       // Start by saying there should be no switching:
-//       shouldSwitch = false;
-//       /* Get the two elements you want to compare,
-//       one from current row and one from the next: */
-//       x = rows[i].getElementsByTagName("TD")[n];
-//       y = rows[i + 1].getElementsByTagName("TD")[n];
-//       /* Check if the two rows should switch place,
-//       based on the direction, asc or desc: */
-//       if (dir == "asc") {
-//         if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-//           // If so, mark as a switch and break the loop:
-//           shouldSwitch= true;
-//           break;
-//         }
-//       } else if (dir == "desc") {
-//         if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-//           // If so, mark as a switch and break the loop:
-//           shouldSwitch= true;
-//           break;
-//         }
-//       }
-//     }
-//     if (shouldSwitch) {
-//       /* If a switch has been marked, make the switch
-//       and mark that a switch has been done: */
-//       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-
-//       switching = true;
-//       // Each time a switch is done, increase this count by 1:
-//       switchcount ++;
-//     } else {
-//       /* If no switching has been done AND the direction is "asc",
-//       set the direction to "desc" and run the while loop again. */
-//       if (switchcount == 0 && dir == "asc") {
-//         dir = "desc";
-//         switching = true;
-//       }
-//     }
-//   }
-// }
+outOfTown.onmouseleave = function(event){
+    toggleList(outOfTown, 'filter__select_list', 'filter__select');
+};
