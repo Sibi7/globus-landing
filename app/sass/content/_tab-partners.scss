@@ -35,9 +35,14 @@
 		&-text {
 			display: flex;
 			flex-direction: column;
+			margin-top: 25px;
+			@include breakpoint(max-width 992px) {
+				margin-top: 10px;
+			}
 			&-name {
 				margin-top: 5px;
 				font-size: 16px;
+				text-transform: uppercase;
 			}
 			&-desc {
 				margin-top: 10px;
@@ -62,7 +67,7 @@
 				font-size: 14px;
 			}
 			&-body {
-				font-size: 22px;
+				font-size: 32px;
 			}
 		}
 	}
@@ -73,7 +78,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 32.6%;
-		height: 15vw;
+		height: 250px;
 		margin-top: 20px;
 		margin-right: 1%;
 		background-color: #9b0028;
@@ -82,9 +87,41 @@
 			margin-right: 0;
 		}
 
+		&_sber {
+			background-color: #4ce478;
+
+			.tab-partners__content-block-bottom {
+				border-top: 1px solid #8de39f;
+			}
+
+			.tab-partners__content-label:first-child {
+				border-right: 1px solid #8de39f;
+			}
+
+			.tab-partners__content-img {
+				background-color: transparent;
+			}
+		}
+
+		&_vtb,
+		&_rebirth {
+			background-color: #00a0e3;
+
+			.tab-partners__content-block-bottom {
+				border-top: 1px solid #00b8e1;
+			}
+
+			.tab-partners__content-label:first-child {
+				border-right: 1px solid #00b8e1;
+			}
+		}
+
+		@include breakpoint(max-width 1600px) {
+			height: 300px;
+		}
+
 		@include breakpoint(max-width 1200px) {
 			width: 49%;
-			height: 20vw;
 			margin-top: 10px;
 
 			&:nth-child(3n) {
@@ -99,8 +136,16 @@
 		@include breakpoint(max-width 768px) {
 			width: 100%;
 			margin-right: 0;
-			height: 40vw;
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
 		}
+
+		@include breakpoint(max-width 400px) {
+			height: 330px;
+		}
+
 		&_small {
 			align-items: center;
 			height: auto;
@@ -109,7 +154,7 @@
 		}
 		
 		&-top {
-			padding-bottom: 5px;
+			padding: 5px;
 			display: flex;
 			height: 60%;
 			min-height: 100px;
@@ -163,4 +208,10 @@
 		display: flex;
 		margin-top: 20px;
 	}
+}
+
+.hypothec {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20px;
 }

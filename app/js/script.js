@@ -89,22 +89,6 @@ $(document).ready(function () {
         });
     });
 
-    $( ".map__btn" ).click(function() {
-        $( ".map__wrap" ).slideToggle(0);
-        $('.map__btn').toggleClass('active');
-
-        map.customGeoCoder('г. Москва', [], function (coor) {
-            map.init({
-                mapId: 'yaMap',
-                height: '365px',
-                zoom: 11,
-                center: coor,
-                controls: ['default', 'routeButtonControl']
-            });
-            console.log(coor);
-        });
-    });
-
     $('.aside-content__form-telm, .js_modal-mask').inputmask({ alias: "phoneru"});
 
     $(window).resize(function () {
@@ -440,14 +424,6 @@ city.onmouseenter = function(event){
 
 city.onmouseleave = function(event){
     toggleList(city, 'filter__select_list', 'filter__select');
-};
-
-discounts.onmouseenter = function(event){
-    toggleList(discounts, 'filter__select_list', 'filter__select');
-};
-
-discounts.onmouseleave = function(event){
-    toggleList(discounts, 'filter__select_list', 'filter__select');
 };
 
 outOfTown.onmouseenter = function(event){

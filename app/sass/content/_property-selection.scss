@@ -43,7 +43,12 @@
     cursor: pointer;
     border: 1px solid transparent;
   }
+  &__show {
+    margin: 0 auto;
+  }
   .btn-white{
+    display: inline-block;
+    width: 190px;
     top: inherit;
     color: #b89855;
     border-color: #b89855;
@@ -52,23 +57,16 @@
     @include breakpoint(max-width 770px){
       margin-top: 20px;
     }
-    &:after{
-      content: 'Найдено 1645 квартир';
-      left: 50%;
-      top: 100%;
-      width: 100%;
-      text-transform: none;
-      color: #030621;
-      transform: translateX(-50%);
-      font-size: 13px;
-      font-weight: 400;
-      margin-top: 10px;
-      text-align: center;
-      position: absolute;
-    }
     &:before{
       background-image: url(../img/icons/arrow-r2.svg);
     }
+  }
+  &__found {
+    display: none;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: center;
   }
   .active{
     border: 1px solid #b89855;
