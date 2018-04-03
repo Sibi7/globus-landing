@@ -45,6 +45,11 @@
   }
   &__show {
     margin: 0 auto;
+
+    .btn-white {
+      position: static;
+      width: 190px;
+    }
   }
   .btn-white{
     display: inline-block;

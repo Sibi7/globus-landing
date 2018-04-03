@@ -5,8 +5,8 @@
     <div class="sidebar__phone-number">
         <a href="tel:+7(499)390-55-71">+7(499)390-55-71</a>
     </div>
-    <a href="#" class="sidebar__discount-btn">получить сКИдку</a>
-    <a href="#" class="sidebar__feedback">Заказать звонок</a>
+    <a href="#" class="sidebar__discount-btn js_open-modal">получить скидку</a>
+    <a href="#" class="sidebar__feedback js_open-call-modal">Заказать звонок</a>
     <ul class="header__nav">
         <li><a href="#">Новостройки</a></li>
         <li><a href="#">Городская недвижимость</a></li>
@@ -27,5 +27,47 @@
         <a href="https://plus.google.com/116814065396263677215"><i class="fab fa-google-plus-g"></i></a>
         <a href="https://www.youtube.com/channel/UC8Kz_aS1U36v-h_pjyNR0OQ"><i class="fab fa-youtube"></i></a>
         <a href="https://twitter.com/Estate_Globus"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <div class="modal js_modal">
+        <div class="modal__overlay js_close-modal"></div>
+        <div class="modal__content">
+            <button class="modal__close js_close-modal" type="button">X</button>
+            <h3 class="modal__title">Оставьте свою заявку!</h3>
+            <form class="modal__form" id="modal__form">
+                <div class="modal__form-row">
+                    <label class="modal__form-label" for="name">Ваше имя</label>
+                    <input class="modal__form-input" type="text" placeholder="Ваше имя">
+                </div>
+
+                <div class="modal__form-row">
+                    <label class="modal__form-label" for="tel">Ваш телефон</label>
+                    <input class="modal__form-input js_modal-mask" type="text" placeholder="Ваш телефон">
+                </div>
+
+                <div class="modal__form-row">
+                    <input class="calc__btn" type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal modal__call js_call-modal">
+        <div class="modal__overlay js_close-modal"></div>
+        <div class="modal__content modal__content_call">
+            <button class="modal__close js_close-modal" type="button">X</button>
+            <h3 class="modal__title">Оставьте свою заявку!</h3>
+            <form class="modal__form" id="modal__call-form">
+
+                <div class="modal__form-row">
+                    <label class="modal__form-label" for="tel">Ваш телефон</label>
+                    <input class="modal__form-input js_modal-mask" type="text" name="tel-call" placeholder="Ваш телефон">
+                </div>
+
+                <div class="modal__form-row">
+                    <input class="calc__btn" type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
     </div>
 </aside>

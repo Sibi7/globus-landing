@@ -26,8 +26,8 @@
     <div class="sidebar__phone-number">
         <a href="tel:+7(499)390-55-71">+7(499)390-55-71</a>
     </div>
-    <a href="#" class="sidebar__discount-btn">получить сКИдку</a>
-    <a href="#" class="sidebar__feedback">Заказать звонок</a>
+    <a href="#" class="sidebar__discount-btn js_open-modal">получить скидку</a>
+    <a href="#" class="sidebar__feedback js_open-call-modal">Заказать звонок</a>
     <ul class="header__nav">
         <li><a href="#">Новостройки</a></li>
         <li><a href="#">Городская недвижимость</a></li>
@@ -48,6 +48,48 @@
         <a href="https://plus.google.com/116814065396263677215"><i class="fab fa-google-plus-g"></i></a>
         <a href="https://www.youtube.com/channel/UC8Kz_aS1U36v-h_pjyNR0OQ"><i class="fab fa-youtube"></i></a>
         <a href="https://twitter.com/Estate_Globus"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <div class="modal js_modal">
+        <div class="modal__overlay js_close-modal"></div>
+        <div class="modal__content">
+            <button class="modal__close js_close-modal" type="button">X</button>
+            <h3 class="modal__title">Оставьте свою заявку!</h3>
+            <form class="modal__form" id="modal__form">
+                <div class="modal__form-row">
+                    <label class="modal__form-label" for="name">Ваше имя</label>
+                    <input class="modal__form-input" type="text" placeholder="Ваше имя">
+                </div>
+
+                <div class="modal__form-row">
+                    <label class="modal__form-label" for="tel">Ваш телефон</label>
+                    <input class="modal__form-input js_modal-mask" type="text" placeholder="Ваш телефон">
+                </div>
+
+                <div class="modal__form-row">
+                    <input class="calc__btn" type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal modal__call js_call-modal">
+        <div class="modal__overlay js_close-modal"></div>
+        <div class="modal__content modal__content_call">
+            <button class="modal__close js_close-modal" type="button">X</button>
+            <h3 class="modal__title">Оставьте свою заявку!</h3>
+            <form class="modal__form" id="modal__call-form">
+
+                <div class="modal__form-row">
+                    <label class="modal__form-label" for="tel">Ваш телефон</label>
+                    <input class="modal__form-input js_modal-mask" type="text" name="tel-call" placeholder="Ваш телефон">
+                </div>
+
+                <div class="modal__form-row">
+                    <input class="calc__btn" type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
     </div>
 </aside>
 <!-- end main-sidebar.html-->
@@ -106,7 +148,7 @@
 <!-- end hypothec-crumbs.html-->
 <!-- start hypothec.html-->
 <section class="hypothec">
-	<div class="tab-partners__content-wrap">
+	<!-- <div class="tab-partners__content-wrap">
 
 		<div class="tab-partners__content tab-partners__content-blocks">
 			<div class="tab-partners__content-block tab-partners__content-block_small">
@@ -132,7 +174,6 @@
 					<div class="tab-partners__content-text">
 						<span class="tab-partners__content-text-name">Сбербанк</span>
 						<span class="tab-partners__content-text-desc">Ипотека на строящееся жильё</span>
-						<!-- <span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span> -->
 					</div>
 				</div>
 				<div class="tab-partners__content-block-bottom">
@@ -153,7 +194,6 @@
 					<div class="tab-partners__content-text">
 						<span class="tab-partners__content-text-name">Сбербанк</span>
 						<span class="tab-partners__content-text-desc">Ипотека от 6% годовых</span>
-						<!-- <span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span> -->
 					</div>
 				</div>
 				<div class="tab-partners__content-block-bottom">
@@ -174,7 +214,6 @@
 					<div class="tab-partners__content-text">
 						<span class="tab-partners__content-text-name">ВТБ</span>
 						<span class="tab-partners__content-text-desc">Ипотека от 9,3% годовых</span>
-						<!-- <span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span> -->
 					</div>
 				</div>
 				<div class="tab-partners__content-block-bottom">
@@ -195,7 +234,6 @@
 					<div class="tab-partners__content-text">
 						<span class="tab-partners__content-text-name">МКБ</span>
 						<span class="tab-partners__content-text-desc">Ипотека с нулевым ПВ на строящееся жильё</span>
-						<!-- <span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span> -->
 					</div>
 				</div>
 				<div class="tab-partners__content-block-bottom">
@@ -257,7 +295,72 @@
 	<nav class="nav-local">
 		<button class="nav-local__btn" type="button">1</button>
 		<button class="nav-local__btn" type="button">2</button>
-	</nav>
+	</nav> -->
+	<div class="calc" id="tab-calc">
+		<header class="calc__header"><img src="img/calc-bg.jpg" alt=""></header>
+		<div class="calc__row">
+			<div class="calc__time">
+				<h3 class="calc__title">Срок кредита, лет</h3>
+				<div class="slider_time"></div>
+			</div>
+		</div>
+
+		<div class="calc__row calc__row_after-slider">
+			<div class="calc__field">
+				<h3 class="calc__title">Стоимость недвижимости, руб.</h3>
+				<input class="calc__input" id="cost" min="0" type="number" placeholder="Введите сумму *">
+			</div>
+
+			<div class="calc__field">
+				<h3 class="calc__title">Первоначальный взнос, руб</h3>
+				<input class="calc__input calc__input_payment" id="first-payment" min="0" type="number" placeholder="Введите сумму *">
+			</div>
+		</div>
+
+		<div class="calc__row">
+			<div class="calc__rate">
+				<h3 class="calc__title">Процентная ставка, % годовых</h3>
+				<div class="slider_rate"></div>
+			</div>
+		</div>
+
+		<div class="calc__row calc__row_after-slider">
+			<h3 class="calc__title">Сумма кредита</h3>
+			<p class="calc__cost calc__final-credit">0 руб.</p>
+		</div>
+
+		<div class="calc__row">
+			<h3 class="calc__title">Ежемесячный платёж</h3>
+			<p class="calc__cost calc__month-payment">0 руб.</p>
+		</div>
+
+		<button class="calc__btn" type="button">Посчитать</button>
+
+		<button class="calc__btn js_open-modal" type="button">Заявка на ипотеку</button>
+	</div>
+
+	<div class="modal js_modal">
+		<div class="modal__overlay js_close-modal"></div>
+		<div class="modal__content">
+			<button class="modal__close js_close-modal" type="button">X</button>
+			<h3 class="modal__title">Оставьте свою заявку!</h3>
+			<form class="modal__form" id="modal__form">
+				<div class="modal__form-row">
+					<label class="modal__form-label" for="name">Ваше имя</label>
+					<input class="modal__form-input" type="text" placeholder="Ваше имя">
+				</div>
+
+				<div class="modal__form-row">
+					<label class="modal__form-label" for="tel">Ваш телефон</label>
+					<input class="modal__form-input js_modal-mask" type="text" placeholder="Ваш телефон">
+				</div>
+
+				<div class="modal__form-row">
+					<input class="calc__btn" type="submit" value="Отправить">
+				</div>
+			</form>
+		</div>
+	</div>
 </section>
 <!-- end hypothec.html-->
 <!-- start footer.html-->

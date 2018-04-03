@@ -330,10 +330,7 @@ if($(window).width() < 576) {
     });
 }
 // calculator
-if(realtyCost) {
-
-
-
+if(document.getElementById('cost')) {
     var realtyCost = document.getElementById('cost');
     var firstPayment = document.getElementById('first-payment');
     var amountOfCredit = document.querySelector('.calc__final-credit');
@@ -389,6 +386,10 @@ if(realtyCost) {
 
 $(document).on('click', '.js_open-modal', function() {
     $('.js_modal').fadeIn('fast');
+});
+
+$(document).on('click', '.js_open-call-modal', function() {
+    $('.js_call-modal').fadeIn('fast');
 });
 
 $(document).on('click', '.js_close-modal', function() {
