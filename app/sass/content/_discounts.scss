@@ -23,3 +23,13 @@
 		margin: 0;
 	}
 }
+
+.housing__item_discount {
+	&:before {
+		display: none;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}

@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $('#table').tablesorter();
+
     $('.owl-carousel-header').owlCarousel({
         loop: true,
         margin: 0,
@@ -386,7 +388,7 @@ if(realtyCost) {
 }
 
 $(document).on('click', '.js_open-modal', function() {
-    $('.modal').fadeIn('fast');
+    $('.js_modal').fadeIn('fast');
 });
 
 $(document).on('click', '.js_close-modal', function() {

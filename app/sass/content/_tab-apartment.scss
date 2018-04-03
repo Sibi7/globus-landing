@@ -90,3 +90,35 @@
 	padding: 10px 15px;
 	border: 1px solid $gold;
 }
+
+.tablesorter-header-inner {
+	cursor: pointer;
+	
+	&:after {
+		content: '\25B4 \25BE';
+	}
+}
+
+.sorter-false .tablesorter-header-inner {
+	cursor: auto;
+
+	&:after {
+		display: none;
+	}
+}
+
+.tablesorter-headerSortDown .tablesorter-header-inner {
+	padding-right: 14px;
+
+	&:after {
+		content: '\25BE';
+	}
+}
+
+.tablesorter-headerSortUp .tablesorter-header-inner {
+	padding-right: 14px;
+
+	&:after {
+		content: '\25B4';
+	}
+}

@@ -129,17 +129,6 @@
         transition: 200ms ease;
       }
     }
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(3, 6, 33, 0.4);
-    }
   }
   &__item-x-small{
     position: relative;
@@ -174,18 +163,6 @@
         background: rgba(3,6,33, .4);
         transition: 200ms ease;
       }
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(3, 6, 33, 0.4);
-      transition: 200ms ease;
     }
   }
   &__content {

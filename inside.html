@@ -38,7 +38,7 @@
         <li><a href="hypothec.html">Ипотека</a></li>
         <li><a href="#">Инвестиции</a></li>
         <li><a href="about.html">О компании</a></li>
-        <li><a href="#">Застройщикам</a></li>
+        <li><a href="developers.html">Застройщикам</a></li>
         <li><a href="contacts.html">Контакты</a></li>
     </ul>
     <div class="sidebar__socials">
@@ -558,13 +558,13 @@
 	<table class="apartment__table" id="table">
 		<thead class="apartment__table-head">
 			<tr class="apartment__table-tr">
-				<th class="apartment__table-th">ЖК</th>
-				<th class="apartment__table-th">Корпус</th>
-				<th class="apartment__table-th">Секц.</th>
-				<th class="apartment__table-th">Комн</th>
+				<th class="apartment__table-th sorter-false">ЖК</th>
+				<th class="apartment__table-th sorter-false">Корпус</th>
+				<th class="apartment__table-th sorter-false">Секц.</th>
+				<th class="apartment__table-th sorter-false">Комн</th>
 				<th class="apartment__table-th">Этаж</th>
 				<th class="apartment__table-th">Площадь</th>
-				<th class="apartment__table-th">Отделка</th>
+				<th class="apartment__table-th sorter-false">Отделка</th>
 				<th class="apartment__table-th">Стоимость</th>
 			</tr>
 		</thead>
@@ -1426,7 +1426,7 @@
 	<button class="calc__btn js_open-modal" type="button">Заявка на ипотеку</button>
 </div>
 
-<div class="modal">
+<div class="modal js_modal">
 	<div class="modal__overlay js_close-modal"></div>
 	<div class="modal__content">
 		<button class="modal__close js_close-modal" type="button">X</button>
@@ -1613,6 +1613,7 @@
 <script src="js/jquery.ui.touch-punch.min.js"></script>
 <script src="js/jquery-ui-slider-pips.js"></script>
 <script src='js/owl.carousel.min.js'></script>
+<script src="js/jquery.tablesorter.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <script src="js/script.min.js"></script>
 <script src="js/ACMap.js"></script>
