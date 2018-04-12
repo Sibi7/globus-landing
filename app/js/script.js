@@ -277,7 +277,7 @@ $(".slider_time")
 })
 .slider('pips', {
     rest: "label",
-    step: 2.5
+    step: 50
 })
 .slider('float', {
     rest: "label"
@@ -292,7 +292,7 @@ $(".slider_rate")
 })
 .slider('pips', {
     rest: "label",
-    step: 15
+    step: 250
 })
 .slider('float', {
     rest: "label"
@@ -329,6 +329,19 @@ if($(window).width() < 576) {
         rest: "label"
     });
 }
+
+$(document).on('click', '.js_open-modal', function() {
+    $('.js_modal').fadeIn('fast');
+});
+
+$(document).on('click', '.js_open-call-modal', function() {
+    $('.js_call-modal').fadeIn('fast');
+});
+
+$(document).on('click', '.js_close-modal', function() {
+    $('.modal').fadeOut('fast');
+});
+
 // calculator
 if(document.getElementById('cost')) {
     var realtyCost = document.getElementById('cost');
@@ -383,18 +396,6 @@ if(document.getElementById('cost')) {
         calcMonthPayment();
     });
 }
-
-$(document).on('click', '.js_open-modal', function() {
-    $('.js_modal').fadeIn('fast');
-});
-
-$(document).on('click', '.js_open-call-modal', function() {
-    $('.js_call-modal').fadeIn('fast');
-});
-
-$(document).on('click', '.js_close-modal', function() {
-    $('.modal').fadeOut('fast');
-});
 
 var city = document.getElementById('city');
 var outOfTown = document.getElementById('out-of-town');

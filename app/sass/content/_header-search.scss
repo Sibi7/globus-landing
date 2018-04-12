@@ -49,16 +49,22 @@
   }
   &__btn{
     position: absolute;
-    width: 21px;
-    height: 21px;
+    left: -9999px;
+    z-index: -999;
+  }
+
+  &__label {
+    position: absolute;
+    top: 39px;
     right: 40px;
-    background: url(../img/icons/search.png) no-repeat center center;
-    background-size: contain;
-    transition: 200ms ease;
-    &:hover{
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
       transform: scale(1.2);
-      transition: 200ms ease;
+      transition: transform 0.2s;
     }
+
     @include breakpoint(max-width 1024px){
       bottom: 22px;
       right: 20px;
