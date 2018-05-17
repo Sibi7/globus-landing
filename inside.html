@@ -100,7 +100,20 @@
 <header class="header">
 
 	<ul class="header__nav">
-		<li><a class="header__nav-link" href="new-buildings.html">Новостройки</a></li>
+		<li>
+			<div class="filter__select_wrap" id="new-buildings">
+				<div  class="filter__select">
+					<span class="filter__select_active header__nav-link">Новостройки</span>
+				</div>
+
+				<ul class="filter__select_list">
+					<li><a class="header__nav-link header__nav-link_list" href="#">Коттеджные новостройки</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Загородные новостройки</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Таунхаусы новостройки</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Участки новостройки</a></li>
+				</ul>
+			</div>
+		</li>
 		<li>
 			<div class="filter__select_wrap" id="city">
 				<div  class="filter__select">
@@ -1850,8 +1863,11 @@
         </div>
     </div>
     <div class="footer__copyright">
-        © Globus Estate 2018 г.  Все права защищены
-        Представленная информация не является публичной офертой
+        <a class=footer__copyright-link"" href="http://crears.ru">
+            <img src="img/crears_logo.png" width="162" height="22" alt="CREARS" class="footer__crears-logo">
+        </a>
+        <p class="footer__copyright-text">© Globus Estate 2018 г.  Все права защищены.
+        Представленная информация не является публичной офертой</p>
     </div>
 </footer>
 <!-- end footer.html-->

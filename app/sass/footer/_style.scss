@@ -58,14 +58,23 @@
     }
   }
   &__copyright {
-    width: 404px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     color: #d1b374;
     font-size: 14px;
-    display: block;
     text-align: center;
     margin: 40px auto 0 auto;
-    @include breakpoint(max-width 770px) {
-      width: 100%;
+
+    &-text {
+      /*max-width: 400px;*/
+      margin: 0;
+      line-height: 1;
     }
+  }
+
+  &__crears-logo {
+    margin-right: 20px;
   }
 }

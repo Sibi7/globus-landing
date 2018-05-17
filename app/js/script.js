@@ -1,4 +1,29 @@
 $(document).ready(function () {
+    
+    city.onmouseenter = function(event){
+        toggleList(city, 'filter__select_list', 'filter__select');
+    };
+
+    city.onmouseleave = function(event){
+        toggleList(city, 'filter__select_list', 'filter__select');
+    };
+
+    outOfTown.onmouseenter = function(event){
+        toggleList(outOfTown, 'filter__select_list', 'filter__select');
+    };
+
+    outOfTown.onmouseleave = function(event){
+        toggleList(outOfTown, 'filter__select_list', 'filter__select');
+    };
+
+    newBuildings.onmouseenter = function(event){
+        toggleList(newBuildings, 'filter__select_list', 'filter__select');
+    };
+
+    newBuildings.onmouseleave = function(event){
+        toggleList(newBuildings, 'filter__select_list', 'filter__select');
+    };
+
     $('#table').tablesorter();
 
     $('.owl-carousel-header').owlCarousel({
@@ -400,6 +425,7 @@ if(document.getElementById('cost')) {
 var city = document.getElementById('city');
 var outOfTown = document.getElementById('out-of-town');
 var discounts = document.getElementById('discounts');
+var newBuildings = document.getElementById('new-buildings');
 
 function toggleList(subject, subjectList, filterWrap) {
     var list = subject.querySelector('.' + subjectList);
@@ -421,19 +447,3 @@ function toggleList(subject, subjectList, filterWrap) {
         list.style.maxHeight = list.scrollHeight + 30 + "px";
     }
 }
-
-city.onmouseenter = function(event){
-    toggleList(city, 'filter__select_list', 'filter__select');
-};
-
-city.onmouseleave = function(event){
-    toggleList(city, 'filter__select_list', 'filter__select');
-};
-
-outOfTown.onmouseenter = function(event){
-    toggleList(outOfTown, 'filter__select_list', 'filter__select');
-};
-
-outOfTown.onmouseleave = function(event){
-    toggleList(outOfTown, 'filter__select_list', 'filter__select');
-};
