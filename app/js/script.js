@@ -1,5 +1,19 @@
 $(document).ready(function () {
-    
+
+    $('.ss-about__owl-carousel').owlCarousel({
+        loop:true,
+        autoWidth:true,
+        navigation : true,
+        navText : ["",""]
+    });
+
+    $('.ss-sale__owl-carousel').owlCarousel({
+        loop:true,
+        items: 1,
+        navigation : true,
+        navText : ["",""]
+    });
+
     city.onmouseenter = function(event){
         toggleList(city, 'filter__select_list', 'filter__select');
     };
