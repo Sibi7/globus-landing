@@ -11,7 +11,9 @@ $(document).ready(function () {
         loop:true,
         items: 1,
         navigation : true,
-        navText : ["",""]
+        navText : ["",""],
+        margin: 55,
+        center:true
     });
 
     city.onmouseenter = function(event){
