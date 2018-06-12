@@ -1,28 +1,55 @@
 $(document).ready(function () {
-    
-    city.onmouseenter = function(event){
-        toggleList(city, 'filter__select_list', 'filter__select');
-    };
 
-    city.onmouseleave = function(event){
-        toggleList(city, 'filter__select_list', 'filter__select');
-    };
+    $('.ss-about__owl-carousel').owlCarousel({
+        loop:true,
+        autoWidth:true,
+        navigation : true,
+        navText : ["",""]
+    });
 
-    outOfTown.onmouseenter = function(event){
-        toggleList(outOfTown, 'filter__select_list', 'filter__select');
-    };
+    $('.ss-sale__owl-carousel').owlCarousel({
+        loop:true,
+        items: 1,
+        navigation : true,
+        navText : ["",""],
+        margin: 55,
+        center:true
+    });
 
-    outOfTown.onmouseleave = function(event){
-        toggleList(outOfTown, 'filter__select_list', 'filter__select');
-    };
+    if ($('.filter__select_list').length > 0) {
+        city.onmouseenter = function(event){
+            toggleList(city, 'filter__select_list', 'filter__select');
+        };
 
-    newBuildings.onmouseenter = function(event){
-        toggleList(newBuildings, 'filter__select_list', 'filter__select');
-    };
+        city.onmouseleave = function(event){
+            toggleList(city, 'filter__select_list', 'filter__select');
+        };
 
-    newBuildings.onmouseleave = function(event){
-        toggleList(newBuildings, 'filter__select_list', 'filter__select');
-    };
+        outOfTown.onmouseenter = function(event){
+            toggleList(outOfTown, 'filter__select_list', 'filter__select');
+        };
+
+        outOfTown.onmouseleave = function(event){
+            toggleList(outOfTown, 'filter__select_list', 'filter__select');
+        };
+
+        newBuildings.onmouseenter = function(event){
+            toggleList(newBuildings, 'filter__select_list', 'filter__select');
+        };
+
+        newBuildings.onmouseleave = function(event){
+            toggleList(newBuildings, 'filter__select_list', 'filter__select');
+        };
+    }
+
+    if ($('#ss-header__menu').length > 0) {
+        $('#ss-header__menu-icon').click(function() {
+            $('#ss-header__menu').slideToggle()
+        });
+        $('#ss-header__menu a').click(function() {
+            $('#ss-header__menu a').hide();
+        });
+    }
 
     $('#table').tablesorter();
 
@@ -116,7 +143,7 @@ $(document).ready(function () {
         });
     });
 
-    $('.aside-content__form-telm, .js_modal-mask').inputmask({ alias: "phoneru"});
+    $('.aside-content__form-telm, .js_modal-mask').inputmask({ alias: "phoneru" });
 
     $(window).resize(function () {
         if ($(window).width() < 770) {
