@@ -100,7 +100,7 @@
     float: left;
     height: 422px;
     background: no-repeat center center;
-    background-size: 100%;
+    background-size: cover;
     transition: 500ms ease;
     @include breakpoint(max-width 770px){
       width: 100%;
@@ -136,7 +136,7 @@
     float: right;
     height: calc(422px / 2);
     background: no-repeat center center;
-    background-size: 100%;
+    background-size: cover;
     transition: 500ms ease;
     @include breakpoint(max-width 770px){
       width: 100%;
