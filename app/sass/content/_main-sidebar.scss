@@ -8,6 +8,7 @@
   z-index: 2;
   background-color: #030621;
   @include breakpoint(max-width 1024px){
+    width: 270px;
     left: -270px;
   }
   &__logo{

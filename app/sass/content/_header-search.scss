@@ -57,6 +57,8 @@
     position: absolute;
     top: 39px;
     right: 40px;
+    display: flex;
+    align-items: flex-end;
     cursor: pointer;
     transition: transform 0.2s;
 
