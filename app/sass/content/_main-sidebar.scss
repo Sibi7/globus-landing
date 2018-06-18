@@ -2,12 +2,13 @@
   float: left;
   transition: 500ms ease;
   position: fixed;
-  width: 270px;
+  width: 345px;
   height: 100%;
   padding: 40px;
   z-index: 2;
   background-color: #030621;
   @include breakpoint(max-width 1024px){
+    width: 270px;
     left: -270px;
   }
   &__logo{

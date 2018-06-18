@@ -1,8 +1,8 @@
 .right-container{
     position: relative;
     float: left;
-    width: calc(100% - 270px);
-    margin-left: 270px;
+    width: calc(100% - 345px);
+    margin-left: 345px;
     @include breakpoint(max-width 1024px){
         margin-left: 0;
         width: 100%;
