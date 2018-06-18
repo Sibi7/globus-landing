@@ -17,29 +17,37 @@ $(document).ready(function () {
     });
 
     if ($('.filter__select_list').length > 0) {
-        city.onmouseenter = function(event){
-            toggleList(city, 'filter__select_list', 'filter__select');
-        };
+        // city.onmouseenter = function(event){
+        //     toggleList(city, 'filter__select_list', 'filter__select');
+        // };
 
-        city.onmouseleave = function(event){
-            toggleList(city, 'filter__select_list', 'filter__select');
-        };
+        // city.onmouseleave = function(event){
+        //     toggleList(city, 'filter__select_list', 'filter__select');
+        // };
 
-        outOfTown.onmouseenter = function(event){
-            toggleList(outOfTown, 'filter__select_list', 'filter__select');
-        };
+        // outOfTown.onmouseenter = function(event){
+        //     toggleList(outOfTown, 'filter__select_list', 'filter__select');
+        // };
 
-        outOfTown.onmouseleave = function(event){
-            toggleList(outOfTown, 'filter__select_list', 'filter__select');
-        };
+        // outOfTown.onmouseleave = function(event){
+        //     toggleList(outOfTown, 'filter__select_list', 'filter__select');
+        // };
 
-        newBuildings.onmouseenter = function(event){
-            toggleList(newBuildings, 'filter__select_list', 'filter__select');
-        };
+        // newBuildings.onmouseenter = function(event){
+        //     toggleList(newBuildings, 'filter__select_list', 'filter__select');
+        // };
 
-        newBuildings.onmouseleave = function(event){
-            toggleList(newBuildings, 'filter__select_list', 'filter__select');
-        };
+        // newBuildings.onmouseleave = function(event){
+        //     toggleList(newBuildings, 'filter__select_list', 'filter__select');
+        // };
+        $('.filter__select_wrap').hover(
+            function() {
+                $('.filter__select_list', this).css({'max-height' : 'unset'});
+            },
+            function() {
+                $('.filter__select_list', this).css({'max-height' : 0});
+            }
+        );
     }
 
     if ($('#ss-header__menu').length > 0) {
