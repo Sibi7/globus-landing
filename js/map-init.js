@@ -4,7 +4,7 @@
 var map = new ACMap();
 var districtAddress;
 
-$(document).on('click', '.build__btn', function() {
+$(document).on('click', '.build__btn', function () {
     districtAddress = $(this).attr('data-address');
     $('.map__wrap').slideDown(0);
     $('.map__btn').addClass('active');
@@ -18,16 +18,16 @@ $(document).on('click', '.build__btn', function() {
             center: coor,
             controls: ['default', 'routeButtonControl'],
             placeMarks: [
-            {
-                address: districtAddress,
-                properties: {
-                    hintContent: districtAddress,
-                    balloonContent: districtAddress + ' - шикарные апартаменты!'
-                },
-                options: {
-                    draggable: true
+                {
+                    address: districtAddress,
+                    properties: {
+                        hintContent: districtAddress,
+                        balloonContent: districtAddress + ' - шикарные апартаменты!'
+                    },
+                    options: {
+                        draggable: true
+                    }
                 }
-            }
             ]
         });
         console.log(coor);

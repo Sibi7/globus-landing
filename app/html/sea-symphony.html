@@ -48,8 +48,12 @@
 				Стоимость: от <span>900</span> тыс. руб.<br>
 				Срок сдачи: 2кв. 2018г.
 			</p>
-			<a href="#" class="ss-about__button">смотреть на карте</a>
+			<button class="ss-about__button build__btn">смотреть на карте</button>
+			<div class="map__wrap" id="yaMap">
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+			</div>
 		</div>
+
 		<div class="ss-about__icons">
 			<div class="ss-about__icons-item">
 				<img src="../img/sea-symphony/interchange.png" alt="">
@@ -158,7 +162,7 @@
 					<p class="ss-sale__location">Корпус: 2</p>
 					<p class="ss-sale__location">Этаж: 2/10</p>
 				</div>
-				<a href="#" class="ss-sale__button">Оставить заявку</a>
+				<a href="#" class="ss-sale__button js_open-call-modal" >Оставить заявку</a>
 			</div>
 			<div class="ss-sale__item">
 				<p class="ss-sale__item-top">
@@ -177,7 +181,7 @@
 					<p class="ss-sale__location">Корпус: 2</p>
 					<p class="ss-sale__location">Этаж: 2/10</p>
 				</div>
-				<a href="#" class="ss-sale__button">Оставить заявку</a>
+				<a href="#" class="ss-sale__button js_open-call-modal">Оставить заявку</a>
 			</div>
 			<div class="ss-sale__item">
 				<p class="ss-sale__item-top">
@@ -196,7 +200,7 @@
 					<p class="ss-sale__location">Корпус: 2</p>
 					<p class="ss-sale__location">Этаж: 2/10</p>
 				</div>
-				<a href="#" class="ss-sale__button">Оставить заявку</a>
+				<a href="#" class="ss-sale__button js_open-call-modal">Оставить заявку</a>
 			</div>
 			<div class="ss-sale__item">
 				<p class="ss-sale__item-top">
@@ -215,7 +219,7 @@
 					<p class="ss-sale__location">Корпус: 2</p>
 					<p class="ss-sale__location">Этаж: 2/10</p>
 				</div>
-				<a href="#" class="ss-sale__button">Оставить заявку</a>
+				<a href="#" class="ss-sale__button js_open-call-modal">Оставить заявку</a>
 			</div>
 		</div>
 	</div>
@@ -303,6 +307,8 @@
 		</p>
 	</div>
 </footer>
+
+
 <div class="modal modal__call js_call-modal">
     <div class="modal__overlay js_close-modal"></div>
     <div class="modal__content modal__content_call">
@@ -321,6 +327,28 @@
         </form>
     </div>
 </div>
+
+
+<!--<div class="modal modal__call js_call-modal-2">-->
+	<!--<div class="modal__overlay js_close-modal"></div>-->
+	<!--<div class="modal__content modal__content_call">-->
+		<!--<button class="modal__close js_close-modal" type="button">X</button>-->
+		<!--<h3 class="modal__title">Появились вопросы?</h3>-->
+		<!--<span class="modal__title-lvl-2">Заполните форму и мы вам перезвоним</span>-->
+		<!--<form class="modal__form" id="modal__call-form">-->
+
+			<!--<div class="modal__form-row">-->
+				<!--<label class="modal__form-label" for="tel">Ваш телефоdsdsн</label>-->
+				<!--<input class="modal__form-input js_modal-mask" type="text" name="tel-call" placeholder="Ваш телефон">-->
+			<!--</div>-->
+
+			<!--<div class="modal__form-row">-->
+				<!--<input class="calc__btn" type="submit" value="Отправить">-->
+			<!--</div>-->
+		<!--</form>-->
+	<!--</div>-->
+<!--</div>-->
+
 <div class="ss-callback-button js_open-call-modal">
 	<img src="img/sea-symphony/phone2.png" alt="">
 </div>
