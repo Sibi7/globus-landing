@@ -757,6 +757,33 @@ h1.ss-title {
 // 
 //
 
+.ss-modal__call {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .modal__overlay {
+    background-color: rgba(3,6,33,.9);
+  }
+  .modal__content_call {
+    background-color: #f2f2f4;
+    height: 310px;
+    h1 {
+      margin-top: 15px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .ss-callback__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+      margin-top: 15px;
+    }
+  }
+}
+
 .ss-callback-button {
   background-color: #ffdd00;
   border-radius: 50%;
@@ -785,14 +812,14 @@ h1.ss-title {
   }
 }
 
-//@keyframes phone-txt {
-//  0% {
-//    text-shadow: 2px 2px 4px black, 0 0 em red;
-//  }
-//  100% {
-//    text-shadow: 2px 2px 4px black, 0 0 3em red;
-//  }
-//}
+@keyframes phone-txt {
+ 0% {
+   text-shadow: 1px 1px 3px #b89855, 0 0 0em #b89855;
+ }
+ 100% {
+   text-shadow: 2px 2px 10px #b89855, 0 0 3em #b89855;
+ }
+}
 
 @include breakpoint(max-width 1152px) {
   .ss-sale__owl-carousel {

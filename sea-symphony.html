@@ -76,23 +76,23 @@
 
 		<div class="ss-about__icons">
 			<div class="ss-about__icons-item">
-				<img src="../img/sea-symphony/interchange.png" alt="">
+				<img src="img/sea-symphony/interchange.png" alt="">
 				<p>Удобная транспортная развязка</p>
 			</div>
 			<div class="ss-about__icons-item">
-				<img src="../img/sea-symphony/sea.png" alt="">
+				<img src="img/sea-symphony/sea.png" alt="">
 				<p>близость к морю</p>
 			</div>
 			<div class="ss-about__icons-item">
-				<img src="../img/sea-symphony/surveillance.png" alt="">
+				<img src="img/sea-symphony/surveillance.png" alt="">
 				<p>круглосуточное видеонаблюдение</p>
 			</div>
 			<div class="ss-about__icons-item">
-				<img src="../img/sea-symphony/infrastructure.png" alt="">
+				<img src="img/sea-symphony/infrastructure.png" alt="">
 				<p>вся необходимая инфраструктура рядом</p>
 			</div>
 			<div class="ss-about__icons-item">
-				<img src="../img/sea-symphony/relax.png" alt="">
+				<img src="img/sea-symphony/relax.png" alt="">
 				<p>зоны релакса и развлечений</p>
 			</div>
 		</div>
@@ -329,21 +329,14 @@
 </footer>
 
 
-<div class="modal modal__call js_call-modal">
+<div class="modal modal__call js_call-modal ss-modal__call">
     <div class="modal__overlay js_close-modal"></div>
-    <div class="modal__content modal__content_call">
-        <button class="modal__close js_close-modal" type="button">X</button>
-        <h3 class="modal__title">Оставьте свою заявку!</h3>
-        <form class="modal__form" id="modal__call-form">
-
-            <div class="modal__form-row">
-                <label class="modal__form-label" for="tel">Ваш телефон</label>
-                <input class="modal__form-input js_modal-mask" type="text" name="tel-call" placeholder="Ваш телефон">
-            </div>
-
-            <div class="modal__form-row">
-                <input class="calc__btn" type="submit" value="Отправить">
-            </div>
+    <div class="modal__content modal__content_call ss-callback__text">
+        <h1>Появились вопросы?</h1>
+        <p>Заполните форму и мы вам перезвоним</p>
+        <form class="ss-callback__form" id="modal__call-form">
+            <input class="ss-callback__phone js_modal-mask" type="text" name="tel-call" placeholder="Ваш телефон">
+            <input class="ss-callback__button" type="submit" value="перезвоните мне">
         </form>
     </div>
 </div>
