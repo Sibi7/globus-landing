@@ -8,6 +8,7 @@ $(document).ready(function () {
         navText : ["",""]
     });
 
+
     $('.ss-sale__owl-carousel').owlCarousel({
         loop:true,
         items: 1,
@@ -16,7 +17,30 @@ $(document).ready(function () {
         margin: 55,
         center:true
     });
-
+    $('.ss-sale__items').owlCarousel({
+        loop:false,
+        margin:0,
+        responsiveClass:true,
+        nav: false,
+        autoplay: true,
+        autoWidth:true,
+        autoplayTimeout: 3000,
+        navText : ["",""],
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:4,
+                loop:true
+            }
+        }
+    })
     if ($('.filter__select_list').length > 0) {
         // city.onmouseenter = function(event){
         //     toggleList(city, 'filter__select_list', 'filter__select');
