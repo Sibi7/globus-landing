@@ -59,6 +59,21 @@ $(document).ready(function () {
     //         $('#ss-header__menu a').hide();
     //     });
     // }
+    var mixer = mixitup('.ss-about__owl-carousel');
+    var mixer = mixitup(containerEl);
+    var mixer = mixitup(containerEl, {
+        selectors: {
+            target: '.item'
+        },
+        animation: {
+            duration: 300
+        }
+    });
+
+    $().fancybox({
+        selector : '[data-fancybox="gallery"]',
+        loop     : true
+    });
 
     $('#table').tablesorter();
 

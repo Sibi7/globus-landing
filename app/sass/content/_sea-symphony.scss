@@ -39,6 +39,9 @@ h1.ss-title {
 
 .ss-header {
   background-image: url(../img/sea-symphony/DSC_0474.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 /* ASIDE */
@@ -98,10 +101,9 @@ h1.ss-title {
 
 .ss-header__phon {
   color: $gold;
-  width: 100%;
   font-size: 18px;
   margin-top: 20px;
-  animation: phone-txt 2s infinite ease-out;
+  animation: out 2s infinite ease-out;
 }
 
 /* END ASIDE */
@@ -238,6 +240,8 @@ h1.ss-title {
   border: 1px solid $gold;
   padding: 12px 27px 10px;
   font-weight: bold;
+  background: #fff;
+  outline: none;
   &:hover {
     background-color: $gold;
     color: #fff;
