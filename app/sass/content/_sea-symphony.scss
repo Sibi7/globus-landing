@@ -785,14 +785,7 @@ h1.ss-title {
   }
 }
 
-//@keyframes phone-txt {
-//  0% {
-//    text-shadow: 2px 2px 4px black, 0 0 em red;
-//  }
-//  100% {
-//    text-shadow: 2px 2px 4px black, 0 0 3em red;
-//  }
-//}
+
 
 @include breakpoint(max-width 1152px) {
   .ss-sale__owl-carousel {
