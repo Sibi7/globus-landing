@@ -85,14 +85,16 @@ $(document).ready(function () {
     // }
     var mixer = mixitup('.ss-about__owl-carousel');
     var mixer = mixitup(containerEl);
-    var mixer = mixitup(containerEl, {
-        selectors: {
-            target: '.item'
-        },
-        animation: {
-            duration: 300
-        }
-    });
+    if(mixer.length > 0){
+        var mixer = mixitup(containerEl, {
+            selectors: {
+                target: '.item'
+            },
+            animation: {
+                duration: 300
+            }
+        });
+    }
 
     $().fancybox({
         selector : '[data-fancybox="gallery"]',
