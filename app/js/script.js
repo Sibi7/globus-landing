@@ -84,7 +84,6 @@ $(document).ready(function () {
     //     });
     // }
     var mixer = mixitup('.ss-about__owl-carousel');
-    var mixer = mixitup(containerEl);
     if(mixer.length > 0){
         var mixer = mixitup(containerEl, {
             selectors: {
