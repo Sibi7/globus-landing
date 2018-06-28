@@ -204,6 +204,13 @@ $(document).ready(function () {
     }
 
 
+    $("#ss-header__menu").on("click","a", function () {
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+        return false
+    });
+
 });
 var x, i, j, selElmnt, a, b, c;
 x = document.getElementsByClassName("custom-select");
