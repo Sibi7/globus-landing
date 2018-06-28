@@ -57,6 +57,13 @@ h1.ss-title {
   justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 60px;
+  @include breakpoint(max-width 992px){
+    left: -385px;
+    width: 385px;
+    position: fixed;
+    top: 0;
+    transition: .5s ease;
+  }
   p, h1, span {
     text-align: center;
   }
@@ -67,6 +74,16 @@ h1.ss-title {
       margin: 7px;
     }
   }
+}
+.active{
+  left: 0;
+  top: 0;
+  transition: .5s ease;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+
 }
 
 .ss-header__logo {
@@ -139,7 +156,24 @@ h1.ss-title {
 .ss-header__menu-icon {
   display: none;
 }
-
+.ss-header__menu-mobile{
+  width: 100%;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+  @include breakpoint(max-width 992px){
+    display: flex;
+  }
+  li a{
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 15px;
+  }
+}
 @include breakpoint (max-width 900px) {
   .ss-header__menu {
     flex-direction: column;
@@ -158,6 +192,7 @@ h1.ss-title {
     }
   }
 
+
   .ss-header__menu-icon {
     width: 35px;
     height: 35px;
@@ -169,7 +204,7 @@ h1.ss-title {
     align-items: center;
     position: fixed;
     top: 10px;
-    left: 10px;
+    right: 10px;
     border-radius: 3px;
     z-index: 10;
     cursor: pointer;
