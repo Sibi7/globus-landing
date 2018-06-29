@@ -249,6 +249,9 @@ h1.ss-title {
   justify-content: space-between;
   align-items: center;
   padding: 30px 45px;
+  @include breakpoint(max-width 660px){
+    padding: 15px;
+  }
 }
 
 .ss-about__quick-address {
@@ -411,6 +414,9 @@ h1.ss-title {
   align-items: center;
   margin: 40px 0;
   flex-wrap: wrap;
+  @include breakpoint(max-width 660px){
+    margin: 20px 0;
+  }
   span {
     text-transform: uppercase;
     margin-right: 10px;
@@ -491,6 +497,9 @@ h1.ss-title {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  @include breakpoint(max-width 992px){
+    margin: 0;
+  }
   p {
     text-align: center;
     font-size: 14px;
@@ -506,6 +515,7 @@ h1.ss-title {
     align-items: center;
     justify-content: center;
     margin: 0 55px;
+
     img {
       width: 100%;
     }
@@ -895,6 +905,11 @@ h1.ss-title {
 
   .ss-sale__item {
     width: 48%;
+    @include breakpoint(max-width 992px){
+      width: calc(100vw - 60px);
+
+
+    }
   }
 
   .ss-sale__owl-carousel {
@@ -981,9 +996,6 @@ h1.ss-title {
     margin: 20px 0;
   }
 
-  .ss-sale__item {
-    width: 100%;
-  }
 
   .ss-banks__suggestions-items {
     width: 100%;
