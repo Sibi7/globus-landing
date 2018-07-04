@@ -157,6 +157,11 @@ $(document).ready(function () {
         $('.ss-header__aside').toggleClass('active');
         $('body').toggleClass('overflow-hidden')
     });
+    $('.ss-header__menu-mobile li a').click(function () {
+        $('.menu-2').toggleClass('open');
+        $('.ss-header__aside').removeClass('active');
+        $('body').toggleClass('overflow-hidden')
+    });
 
     var time = 2, cc = 1;
 
