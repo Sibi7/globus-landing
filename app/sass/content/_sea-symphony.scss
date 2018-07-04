@@ -994,6 +994,9 @@ h1.ss-title {
   .ss-about__price-item {
     width: 100%;
     margin: 20px 0;
+    @include breakpoint(max-width 992px){
+      margin: 0;
+    }
   }
 
 
