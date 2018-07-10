@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    var containerEl = document.querySelector('.ss-about__owl-carousel');
+    var mixer;
+
+    if (containerEl) {
+        mixer = mixitup(containerEl, {
+            selectors: {
+                target: '.item'
+            },
+            animation: {
+                duration: 300
+            }
+        });
+    }
 
     $('.ss-about__owl-carousel').owlCarousel({
         loop:true,
@@ -32,7 +45,7 @@ $(document).ready(function () {
                 nav:true
             },
             600:{
-                items:3,
+                items:1,
                 nav:false
             },
             1000:{
@@ -75,24 +88,7 @@ $(document).ready(function () {
         );
     }
 
-    // if ($('#ss-header__menu').length > 0) {
-    //     $('#ss-header__menu-icon').click(function() {
-    //         $('#ss-header__menu').slideToggle()
-    //     });
-    //     $('#ss-header__menu a').click(function() {
-    //         $('#ss-header__menu a').hide();
-    //     });
-    // }
-    var mixer = mixitup('.ss-about__owl-carousel');
-    var mixer = mixitup(containerEl);
-    var mixer = mixitup(containerEl, {
-        selectors: {
-            target: '.item'
-        },
-        animation: {
-            duration: 300
-        }
-    });
+
 
     $().fancybox({
         selector : '[data-fancybox="gallery"]',
@@ -156,6 +152,16 @@ $(document).ready(function () {
         $('.sidebar').toggleClass('active-bar');
         $('body').toggleClass('overflow-hidden')
     });
+    $('.menu-2').click(function () {
+        $(this).toggleClass('open');
+        $('.ss-header__aside').toggleClass('active');
+        $('body').toggleClass('overflow-hidden')
+    });
+    $('.ss-header__menu-mobile li a').click(function () {
+        $('.menu-2').toggleClass('open');
+        $('.ss-header__aside').removeClass('active');
+        $('body').toggleClass('overflow-hidden')
+    });
 
     var time = 2, cc = 1;
 
@@ -202,6 +208,13 @@ $(document).ready(function () {
         $('.housing__item-text').after($('.property-selection'))
     }
 
+
+    $("#ss-header__menu").on("click","a", function () {
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+        return false
+    });
 
 });
 var x, i, j, selElmnt, a, b, c;
