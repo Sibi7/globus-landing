@@ -1,4 +1,4 @@
 .git
 .idea
-node_modules/
 gulpfile.js
+node_modules/
