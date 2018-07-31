@@ -46,6 +46,7 @@
     font-size: 14px;
     cursor: pointer;
     border: 1px solid transparent;
+    overflow: hidden!important;
   }
   &__show {
     margin: 0 auto;
