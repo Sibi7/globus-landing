@@ -18,7 +18,19 @@ $(document).ready(function () {
         loop:true,
         autoWidth:true,
         navigation : true,
-        navText : ["",""]
+        navText : ["",""],
+        responsive:{
+            0:{
+                items:1,
+                nav:true,
+                loop:true
+            },
+            600:{
+                items:1,
+                nav:false,
+                loop:true
+            }
+        }
     });
 
 
@@ -31,7 +43,7 @@ $(document).ready(function () {
         center:true
     });
     $('.ss-sale__items').owlCarousel({
-        loop:false,
+        loop:true,
         margin:0,
         responsiveClass:true,
         nav: false,
@@ -42,11 +54,13 @@ $(document).ready(function () {
         responsive:{
             0:{
                 items:1,
-                nav:true
+                nav:true,
+                loop:true
             },
             600:{
                 items:1,
-                nav:false
+                nav:false,
+                loop:true
             },
             1000:{
                 items:4,
