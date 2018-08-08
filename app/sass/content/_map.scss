@@ -26,6 +26,7 @@
     padding-right: 30px;
     font-size: 14px;
     text-transform: uppercase;
+    overflow: hidden!important;
     &:before {
       content: '';
       position: absolute;
@@ -39,6 +40,7 @@
     }
   }
   .active {
+    width: 275px!important;
     &:before {
       transform: rotate(0);
       transition: 200ms ease;
